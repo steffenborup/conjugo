@@ -484,6 +484,58 @@
                 "Lat": 56.1171405,
                 "Lng": 10.1985861
             }
+        },
+        {
+            "SiteNo": 18,
+            "SiteID": "Sample/DK/Site0018",
+            "CompanyNo": 475,
+            "Name": "Harken",
+            "Address": {
+                "AddressLine1": "Rærupmarken 1",
+                "City": "Hjørring",
+                "CountryCode": "DK",
+                "PostalCode": "9800"
+            },
+            "Tags": [
+                "MAP ADBLUE",
+                "MAP CAR",
+                "MAP HVO",
+                "MAP LOCAL CARDS",
+                "MAP RME100",
+                "MAP B7",
+                "MAP HGV"
+            ],
+            "MarkerColor": "0000FF",
+            "Position": {
+                "Lat": 57.3958875,
+                "Lng": 9.9826522
+            }
+        },
+        {
+            "SiteNo": 19,
+            "SiteID": "Sample/DK/Site0019",
+            "CompanyNo": 475,
+            "Name": "Hæstrup Specialøl",
+            "Address": {
+                "AddressLine1": "Ålborgvej 475",
+                "City": "Hjørring",
+                "CountryCode": "DK",
+                "PostalCode": "9800"
+            },
+            "Tags": [
+                "MAP ADBLUE",
+                "MAP CAR",
+                "MAP HVO",
+                "MAP LOCAL CARDS",
+                "MAP RME100",
+                "MAP B7",
+                "MAP HGV"
+            ],
+            "MarkerColor": "0000FF",
+            "Position": {
+                "Lat": 57.4007081,
+                "Lng": 9.9861331
+            }
         }
     ],
     "Tags": [
