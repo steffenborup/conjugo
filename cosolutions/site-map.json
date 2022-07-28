@@ -536,6 +536,110 @@
                 "Lat": 57.400652215345154,
                 "Lng": 9.987762167946423
             }
+        },
+        {
+            "SiteNo": 20,
+            "SiteID": "Sample/DK/Site0020",
+            "CompanyNo": 475,
+            "Name": "Bjarne",
+            "Address": {
+                "AddressLine1": "Ronesbanke 8",
+                "City": "Præstø",
+                "CountryCode": "DK",
+                "PostalCode": "4720"
+            },
+            "Tags": [
+                "MAP ADBLUE",
+                "MAP CAR",
+                "MAP HVO",
+                "MAP LOCAL CARDS",
+                "MAP RME100",
+                "MAP B7",
+                "MAP HGV"
+            ],
+            "MarkerColor": "FF0000",
+            "Position": {
+                "Lat": 55.10683939998745,
+                "Lng": 12.028600718510232
+            }
+        },
+        {
+            "SiteNo": 21,
+            "SiteID": "Sample/DK/Site0021",
+            "CompanyNo": 475,
+            "Name": "Go'on Præstø",
+            "Address": {
+                "AddressLine1": "Værkstedsvej 8",
+                "City": "Præstø",
+                "CountryCode": "DK",
+                "PostalCode": "4720"
+            },
+            "Tags": [
+                "MAP ADBLUE",
+                "MAP CAR",
+                "MAP HVO",
+                "MAP LOCAL CARDS",
+                "MAP RME100",
+                "MAP B7",
+                "MAP HGV"
+            ],
+            "MarkerColor": "FF0000",
+            "Position": {
+                "Lat": 55.11550071481371,
+                "Lng": 12.039262359816872
+            }
+        },
+        {
+            "SiteNo": 22,
+            "SiteID": "Sample/DK/Site0022",
+            "CompanyNo": 475,
+            "Name": "Uno-X",
+            "Address": {
+                "AddressLine1": "Ny Esbjergvej 16",
+                "City": "Præstø",
+                "CountryCode": "DK",
+                "PostalCode": "4720"
+            },
+            "Tags": [
+                "MAP ADBLUE",
+                "MAP CAR",
+                "MAP HVO",
+                "MAP LOCAL CARDS",
+                "MAP RME100",
+                "MAP B7",
+                "MAP HGV"
+            ],
+            "MarkerColor": "FF0000",
+            "Position": {
+                "Lat": 55.1173403591996,
+                "Lng": 12.03380249782203
+            }
+        },
+        {
+            "SiteNo": 23,
+            "SiteID": "Sample/DK/Site0023",
+            "CompanyNo": 475,
+            "Name": "Circle K",
+            "Address": {
+                "AddressLine1": "Næstvedvej 32, Bårse",
+                "City": "Præstø",
+                "CountryCode": "DK",
+                "PostalCode": "4720"
+            },
+            "Tags": [
+                "MAP ADBLUE",
+                "MAP CAR",
+                "MAP HVO",
+                "MAP LOCAL CARDS",
+                "MAP RME100",
+                "MAP B7",
+                "MAP HGV"
+            ],
+            "MarkerColor": "FF0000",
+            "Position": {
+                "Lat": 55.12130803303376,
+                "Lng": 11.96900910746192
+            }
         }
     ],
     "Tags": [
