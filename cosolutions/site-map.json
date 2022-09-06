@@ -559,8 +559,8 @@
             ],
             "MarkerColor": "FF0000",
             "Position": {
-                "Lat": 55.10683939998745,
-                "Lng": 12.028600718510232
+                "Lat": 55.106365693163,
+                "Lng": 12.028547588143137
             }
         },
         {
@@ -639,6 +639,32 @@
             "Position": {
                 "Lat": 55.12130803303376,
                 "Lng": 11.96900910746192
+            }
+        },
+        {
+            "SiteNo": 24,
+            "SiteID": "Sample/DK/Site0024",
+            "CompanyNo": 475,
+            "Name": "Go'on",
+            "Address": {
+                "AddressLine1": "Niels Bohrs Vej 17",
+                "City": "Skanderborg",
+                "CountryCode": "DK",
+                "PostalCode": "8660"
+            },
+            "Tags": [
+                "MAP ADBLUE",
+                "MAP CAR",
+                "MAP HVO",
+                "MAP LOCAL CARDS",
+                "MAP RME100",
+                "MAP B7",
+                "MAP HGV"
+            ],
+            "MarkerColor": "FF0000",
+            "Position": {
+                "Lat": 56.06772579318371,
+                "Lng": 9.981756640836446
             }
         }
     ],
