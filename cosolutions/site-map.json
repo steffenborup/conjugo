@@ -647,91 +647,106 @@
             "CompanyNo": 475,
             "TagName": "MAP 95 OCTANE",
             "Description": "Petrol 95 Octane",
-            "IconUrl": null
+            "IconUrl": null,
+            "Type": "FUEL"
         },
         {
             "CompanyNo": 475,
             "TagName": "MAP ADBLUE",
             "Description": "AdBlue",
-            "IconUrl": "https://assets.codatahost.com/apps/customerapp/v2/map-icons/AdBlue-icon-2-path.svg"
+            "IconUrl": "https://assets.codatahost.com/apps/customerapp/v2/map-icons/AdBlue-icon-2-path.svg",
+            "Type": "FUEL"
         },
         {
             "CompanyNo": 475,
             "TagName": "MAP BIOD 100%",
             "Description": "Bio Diesel 100%",
-            "IconUrl": null
+            "IconUrl": null,
+            "Type": "FUEL"
         },
         {
             "CompanyNo": 475,
             "TagName": "MAP CAR",
             "Description": "Car",
-            "IconUrl": "https://assets.codatahost.com/apps/customerapp/v2/map-icons/sports-car-0256.svg"
+            "IconUrl": "https://assets.codatahost.com/apps/customerapp/v2/map-icons/sports-car-0256.svg",
+            "Type": "VEHICLE"
         },
         {
             "CompanyNo": 475,
             "TagName": "MAP DIESEL",
             "Description": "Diesel",
-            "IconUrl": "https://assets.codatahost.com/apps/customerapp/v2/map-icons/Diesel-icon-path.svg"
+            "IconUrl": "https://assets.codatahost.com/apps/customerapp/v2/map-icons/Diesel-icon-path.svg",
+            "Type": "FUEL"
         },
         {
             "CompanyNo": 475,
             "TagName": "MAP HVO",
             "Description": "HVO",
-            "IconUrl": "https://assets.codatahost.com/apps/customerapp/v2/map-icons/HVO-icon-6-path.svg"
+            "IconUrl": "https://assets.codatahost.com/apps/customerapp/v2/map-icons/HVO-icon-6-path.svg",
+            "Type": "FUEL"
         },
         {
             "CompanyNo": 475,
             "TagName": "MAP LOCAL CARDS",
             "Description": "Jetzt Energy Card",
-            "IconUrl": "https://assets.codatahost.com/cmp/475_sample/mapicons/JetztEnergyCard.png"
+            "IconUrl": "https://assets.codatahost.com/cmp/475_sample/mapicons/JetztEnergyCard.png",
+            "Type": "PAYMENT"
         },
         {
             "CompanyNo": 475,
             "TagName": "MAP MASTERCARD",
             "Description": "Master Card",
-            "IconUrl": "https://assets.codatahost.com/apps/customerapp/v2/map-icons/MasterCard.svg"
+            "IconUrl": "https://assets.codatahost.com/apps/customerapp/v2/map-icons/MasterCard.svg",
+            "Type": "PAYMENT"
         },
         {
             "CompanyNo": 475,
             "TagName": "MAP SHOP",
             "Description": "Shop",
-            "IconUrl": "https://assets.codatahost.com/cmp/475_sample/mapicons/JetztEnergyShop.svg"
+            "IconUrl": "https://assets.codatahost.com/cmp/475_sample/mapicons/JetztEnergyShop.svg",
+            "Type": null
         },
         {
             "CompanyNo": 475,
             "TagName": "MAP TRUCK",
             "Description": "Truck",
-            "IconUrl": null
+            "IconUrl": null,
+            "Type": "VEHICLE"
         },
         {
             "CompanyNo": 475,
             "TagName": "MAP VISA",
             "Description": "Visa",
-            "IconUrl": "https://assets.codatahost.com/apps/customerapp/v2/map-icons/VISA.svg"
+            "IconUrl": "https://assets.codatahost.com/apps/customerapp/v2/map-icons/VISA.svg",
+            "Type": "PAYMENT"
         },
         {
             "CompanyNo": 475,
             "TagName": "MAP 95 BF",
             "Description": "Petrol 95 Octane",
-            "IconUrl": "https://assets.codatahost.com/apps/customerapp/v2/map-icons/95UL-icon-path.svg"
+            "IconUrl": "https://assets.codatahost.com/apps/customerapp/v2/map-icons/95UL-icon-path.svg",
+            "Type": "FUEL"
         },
         {
             "CompanyNo": 475,
             "TagName": "MAP B7",
             "Description": "Diesel",
-            "IconUrl": "https://assets.codatahost.com/apps/customerapp/v2/map-icons/DieselB7-icon-path.svg"
+            "IconUrl": "https://assets.codatahost.com/apps/customerapp/v2/map-icons/DieselB7-icon-path.svg",
+            "Type": "FUEL"
         },
         {
             "CompanyNo": 475,
             "TagName": "MAP RME100",
             "Description": "Bio Diesel 100%",
-            "IconUrl": "https://assets.codatahost.com/apps/customerapp/v2/map-icons/RME100-icon-5-path.svg"
+            "IconUrl": "https://assets.codatahost.com/apps/customerapp/v2/map-icons/RME100-icon-5-path.svg",
+            "Type": "FUEL"
         },
         {
             "CompanyNo": 475,
             "TagName": "MAP HGV",
             "Description": "Truck",
-            "IconUrl": "https://assets.codatahost.com/apps/customerapp/v2/map-icons/truck-0256.svg"
+            "IconUrl": "https://assets.codatahost.com/apps/customerapp/v2/map-icons/truck-0256.svg",
+            "Type": "VEHICLE"
         }
     ],
     "AllowDownload": true,
