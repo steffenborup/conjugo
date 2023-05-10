@@ -33,40 +33,10 @@
     },
     "Sites": [
         {
-            "SiteNo": 1,
-            "SiteID": "Sample/DK/Site0001",
-            "CompanyNo": 475,
-            "Name": "Hjem",
-            "Address": {
-                "AddressLine1": "Roukær Allé 58",
-                "City": "Højbjerg",
-                "CountryCode": "DK",
-                "PostalCode": "8270"
-            },
-            "Tags": [
-                "MAP ADBLUE",
-                "MAP CAR",
-                "MAP HVO",
-                "MAP LOCAL CARDS",
-                "MAP MASTERCARD",
-                "MAP SHOP",
-                "MAP VISA",
-                "MAP 95 BF",
-                "MAP RME100",
-                "MAP B7",
-                "MAP HGV"
-            ],
-            "MarkerColor": "0000FF",
-            "Position": {
-                "Lat": 56.1086829,
-                "Lng": 10.1915394
-            }
-        },
-        {
             "SiteNo": 2,
             "SiteID": "Sample/DK/Site0002",
             "CompanyNo": 475,
-            "Name": "Uno-X",
+            "Name": "Åbyhøj",
             "Address": {
                 "AddressLine1": "Søren Frichs Vej 32",
                 "City": "Åbyhøj",
@@ -91,7 +61,7 @@
             "SiteNo": 3,
             "SiteID": "Sample/DK/Site0003",
             "CompanyNo": 475,
-            "Name": "OK",
+            "Name": "Åhave",
             "Address": {
                 "AddressLine1": "Åhave Parkvej 11",
                 "City": "Viby J",
@@ -116,7 +86,7 @@
             "SiteNo": 4,
             "SiteID": "Sample/DK/Site0004",
             "CompanyNo": 475,
-            "Name": "Ingo",
+            "Name": "Viby J",
             "Address": {
                 "AddressLine1": "Skanderborgvej 158",
                 "City": "Viby J",
@@ -142,7 +112,7 @@
             "SiteNo": 5,
             "SiteID": "Sample/DK/Site0005",
             "CompanyNo": 475,
-            "Name": "OK",
+            "Name": "Mårslet",
             "Address": {
                 "AddressLine1": "Hørretvej 12",
                 "City": "Mårslet",
@@ -171,7 +141,7 @@
             "SiteNo": 6,
             "SiteID": "Sample/DK/Site0006",
             "CompanyNo": 475,
-            "Name": "Q8",
+            "Name": "Fredensvang",
             "Address": {
                 "AddressLine1": "Fredensvang Runddel 10",
                 "City": "Viby J",
@@ -199,7 +169,7 @@
             "SiteNo": 7,
             "SiteID": "Sample/DK/Site0007",
             "CompanyNo": 475,
-            "Name": "Ingo",
+            "Name": "S. Frichs",
             "Address": {
                 "AddressLine1": "Søren Frichs Vej 54",
                 "City": "Åbyhøj",
@@ -224,7 +194,7 @@
             "SiteNo": 8,
             "SiteID": "Sample/DK/Site0008",
             "CompanyNo": 475,
-            "Name": "F24",
+            "Name": "Beder",
             "Address": {
                 "AddressLine1": "Kirkebakken 2",
                 "City": "Beder",
@@ -251,7 +221,7 @@
             "SiteNo": 9,
             "SiteID": "Sample/DK/Site0009",
             "CompanyNo": 475,
-            "Name": "OK",
+            "Name": "Rosenhøj",
             "Address": {
                 "AddressLine1": "Rosenhøj 30",
                 "City": "Viby J",
@@ -276,7 +246,7 @@
             "SiteNo": 10,
             "SiteID": "Sample/DK/Site0010",
             "CompanyNo": 475,
-            "Name": "Q8",
+            "Name": "Ormslevvej",
             "Address": {
                 "AddressLine1": "Ormslevvej 61",
                 "City": "Viby J",
@@ -302,7 +272,7 @@
             "SiteNo": 11,
             "SiteID": "Sample/DK/Site0011",
             "CompanyNo": 475,
-            "Name": "OK",
+            "Name": "Viby Syd",
             "Address": {
                 "AddressLine1": "Ringvej Syd 100",
                 "City": "Viby J",
@@ -331,7 +301,7 @@
             "SiteNo": 12,
             "SiteID": "Sample/DK/Site0012",
             "CompanyNo": 475,
-            "Name": "Circle K",
+            "Name": "Tranbjerg",
             "Address": {
                 "AddressLine1": "Chr. X's Vej 253",
                 "City": "Tranbjerg",
@@ -358,7 +328,7 @@
             "SiteNo": 13,
             "SiteID": "Sample/DK/Site0013",
             "CompanyNo": 475,
-            "Name": "OK",
+            "Name": "Stenvej",
             "Address": {
                 "AddressLine1": "Stenvej 17",
                 "City": "Højbjerg",
@@ -384,7 +354,7 @@
             "SiteNo": 14,
             "SiteID": "Sample/DK/Site0014",
             "CompanyNo": 475,
-            "Name": "Ingo",
+            "Name": "Oddervej",
             "Address": {
                 "AddressLine1": "Oddervej 178 A",
                 "City": "Højbjerg",
@@ -411,7 +381,7 @@
             "SiteNo": 15,
             "SiteID": "Sample/DK/Site0015",
             "CompanyNo": 475,
-            "Name": "Ingo",
+            "Name": "Sletvej",
             "Address": {
                 "AddressLine1": "Sletvej 36",
                 "City": "Tranbjerg",
@@ -437,7 +407,7 @@
             "SiteNo": 16,
             "SiteID": "Sample/DK/Site0016",
             "CompanyNo": 475,
-            "Name": "Circle K",
+            "Name": "Højbjerg",
             "Address": {
                 "AddressLine1": "Stenvej 1",
                 "City": "Højbjerg",
@@ -463,7 +433,7 @@
             "SiteNo": 17,
             "SiteID": "Sample/DK/Site0017",
             "CompanyNo": 475,
-            "Name": "Circle K",
+            "Name": "Rosenvang",
             "Address": {
                 "AddressLine1": "Rosenvangs Allé 218",
                 "City": "Højbjerg",
@@ -512,32 +482,6 @@
             }
         },
         {
-            "SiteNo": 19,
-            "SiteID": "Sample/DK/Site0019",
-            "CompanyNo": 475,
-            "Name": "Hæstrup Specialøl",
-            "Address": {
-                "AddressLine1": "Ålborgvej 475",
-                "City": "Hjørring",
-                "CountryCode": "DK",
-                "PostalCode": "9800"
-            },
-            "Tags": [
-                "MAP ADBLUE",
-                "MAP CAR",
-                "MAP HVO",
-                "MAP LOCAL CARDS",
-                "MAP RME100",
-                "MAP B7",
-                "MAP HGV"
-            ],
-            "MarkerColor": "0000FF",
-            "Position": {
-                "Lat": 57.400652215345154,
-                "Lng": 9.987762167946423
-            }
-        },
-        {
             "SiteNo": 20,
             "SiteID": "Sample/DK/Site0020",
             "CompanyNo": 475,
@@ -567,7 +511,7 @@
             "SiteNo": 21,
             "SiteID": "Sample/DK/Site0021",
             "CompanyNo": 475,
-            "Name": "Go'on Præstø",
+            "Name": "Præstø",
             "Address": {
                 "AddressLine1": "Værkstedsvej 8",
                 "City": "Præstø",
@@ -593,7 +537,7 @@
             "SiteNo": 22,
             "SiteID": "Sample/DK/Site0022",
             "CompanyNo": 475,
-            "Name": "Uno-X",
+            "Name": "Ny Esbjergvej",
             "Address": {
                 "AddressLine1": "Ny Esbjergvej 16",
                 "City": "Præstø",
@@ -619,7 +563,7 @@
             "SiteNo": 23,
             "SiteID": "Sample/DK/Site0023",
             "CompanyNo": 475,
-            "Name": "Circle K",
+            "Name": "Bårse",
             "Address": {
                 "AddressLine1": "Næstvedvej 32, Bårse",
                 "City": "Præstø",
@@ -645,7 +589,7 @@
             "SiteNo": 24,
             "SiteID": "Sample/DK/Site0024",
             "CompanyNo": 475,
-            "Name": "Go'on",
+            "Name": "Skanderborg",
             "Address": {
                 "AddressLine1": "Niels Bohrs Vej 17",
                 "City": "Skanderborg",
