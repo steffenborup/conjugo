@@ -63,8 +63,8 @@ require('numeral/locales/da-dk');
 
     var accountMap = new AccountMap();
 
-    accountMap.add('Telia', -170, 62031);
-    accountMap.add('Telenor', -195, 62046);
+    accountMap.add('Telia', -170.00, 62031);
+    accountMap.add('Telenor', -195.00, 62046);
     accountMap.add('Adobe', null, 7610);
     accountMap.add('CLICKUP', null, 7620);
     accountMap.add('SKAT', null, 60180);
@@ -137,8 +137,7 @@ require('numeral/locales/da-dk');
 
                 if (type === 'bank')
                 {
-                    // account = accountMap.get(Line.Text, amount);
-                    console.log(amount);
+                    account = accountMap.get(Line.Text, amount.value());
                     offsetAccount = '55020';
                 }
 
