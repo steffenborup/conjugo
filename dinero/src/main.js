@@ -11,7 +11,7 @@ require('numeral/locales/da-dk');
 
         data = [];
 
-        add(text, account, amount)
+        add(text, amount, account)
         {
 
             if (!text || !account) {
@@ -63,17 +63,14 @@ require('numeral/locales/da-dk');
 
     var accountMap = new AccountMap();
 
-    accountMap.add('Adobe', );
-    accountMap.add('Google GSUITE_conjugo.dk', );
-    accountMap.add('GOOGLE*GSUITE CONJUGO.', );
-    accountMap.add('BACKBLAZE.COM', );
-    accountMap.add('CLICKUP', );
-    accountMap.add('SKAT', );
-    accountMap.add('BS BETALINGSORDNINGER SKATTEKON', );
-    accountMap.add('Hævet privat', );
-    accountMap.add('Telia', );
-    accountMap.add('Telia', );
-    accountMap.add('Telenor', );
+    accountMap.add('Telia', -170, 62031);
+    accountMap.add('Telenor', -195, 62046);
+    accountMap.add('Adobe', null, 7610);
+    accountMap.add('CLICKUP', null, 7620);
+    accountMap.add('SKAT', null, 60180);
+    accountMap.add('BS BETALINGSORDNINGER SKATTEKON', null, 62900);
+    accountMap.add('Lunar Business - Solo', null, 2450);
+    accountMap.add('Hævet privat', null, 60140);
 
     window.ledger = {
         import: (type, contents) => {
