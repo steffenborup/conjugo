@@ -6,6 +6,75 @@ const numeral = require('numeral')
 require('numeral/locales/da-dk');
 
 (function(){
+
+    class AccountMap {
+
+        data = [];
+
+        add(text, account, amount)
+        {
+
+            if (!text || !account) {
+                return;
+            }
+
+            amount = typeof(amount) === 'undefined' ? null : amount;
+
+            this.data.push({
+                text: text.toString().toLowerCase(),
+                amount: amount,
+                account: account
+            });
+
+        }
+
+        get(text, amount)
+        {
+
+            if (!text) {
+                return;
+            }
+
+            text = text.toString().toLowerCase();
+
+            amount = typeof(amount) === 'undefined' ? null : amount;
+
+            for (var i = 0; i < this.data.length; i++) {
+
+                var item = this.data[i];
+
+                if (item.text === text) {
+
+                    if (item.amount != null && item.amount !== amount) {
+                        continue;
+                    }
+
+                    return item.account;
+                    
+                }    
+
+            }
+
+            return null;
+
+        }
+
+    }
+
+    var accountMap = new AccountMap();
+
+    accountMap.add('Adobe', );
+    accountMap.add('Google GSUITE_conjugo.dk', );
+    accountMap.add('GOOGLE*GSUITE CONJUGO.', );
+    accountMap.add('BACKBLAZE.COM', );
+    accountMap.add('CLICKUP', );
+    accountMap.add('SKAT', );
+    accountMap.add('BS BETALINGSORDNINGER SKATTEKON', );
+    accountMap.add('Hævet privat', );
+    accountMap.add('Telia', );
+    accountMap.add('Telia', );
+    accountMap.add('Telenor', );
+
     window.ledger = {
         import: (type, contents) => {
             //console.log('ledger.import()', type);
@@ -71,6 +140,8 @@ require('numeral/locales/da-dk');
 
                 if (type === 'bank')
                 {
+                    // account = accountMap.get(Line.Text, amount);
+                    console.log(amount);
                     offsetAccount = '55020';
                 }
 
