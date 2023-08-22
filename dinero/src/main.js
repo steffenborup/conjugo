@@ -137,7 +137,7 @@ require('numeral/locales/da-dk');
 
                 if (type === 'bank')
                 {
-                    account = accountMap.get(Line.Text, amount.value());
+                    account = accountMap.get(line.Text, amount.value());
                     offsetAccount = '55020';
                 }
 
