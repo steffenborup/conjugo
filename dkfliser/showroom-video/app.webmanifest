@@ -1,7 +1,6 @@
 {
     "name": "DKfliser Showroom Video",
     "short_name": "Showroom",
-    "start_url": "/",
     "display": "standalone",
     "icons": [
         {
