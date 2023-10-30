@@ -1,0 +1,13 @@
+{
+    "name": "DKfliser Showroom Video",
+    "short_name": "Showroom",
+    "start_url": "/",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "icons/1024.png",
+            "type": "image/png",
+            "sizes": "1024x1024"
+         }
+    ]
+}
