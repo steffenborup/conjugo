@@ -661,7 +661,8 @@
                 "MAP 95 BF",
                 "MAP RME100",
                 "MAP B7",
-                "MAP HGV"
+                "MAP HGV",
+                "MAP APP HIDE"
             ],
             "MarkerColor": "0000FF",
             "Position": {
