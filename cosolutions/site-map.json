@@ -632,42 +632,13 @@
                 "MAP 95 BF",
                 "MAP RME100",
                 "MAP B7",
-                "MAP HGV"
+                "MAP HGV",
+                "MAP PRIVATE"
             ],
             "MarkerColor": "0000FF",
             "Position": {
                 "Lat": 56.212254,
                 "Lng": 10.048151
-            }
-        },
-        {
-            "SiteNo": 26,
-            "SiteID": "Sample/DK/Site0025",
-            "CompanyNo": 475,
-            "Name": "Conjugo #2",
-            "Address": {
-                "AddressLine1": "Langfredparken 213",
-                "City": "Sabro",
-                "CountryCode": "DK",
-                "PostalCode": "8471"
-            },
-            "Tags": [
-                "MAP ADBLUE",
-                "MAP CAR",
-                "MAP HVO",
-                "MAP LOCAL CARDS",
-                "MAP MASTERCARD",
-                "MAP VISA",
-                "MAP 95 BF",
-                "MAP RME100",
-                "MAP B7",
-                "MAP HGV",
-                "MAP APP HIDE"
-            ],
-            "MarkerColor": "0000FF",
-            "Position": {
-                "Lat": 56.2121752,
-                "Lng": 10.0479949
             }
         }
     ],
