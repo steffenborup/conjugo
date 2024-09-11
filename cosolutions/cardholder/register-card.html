@@ -13,7 +13,14 @@
     <p>
         <button id="submit">Submit</button>
     </p>
+    <div id="log"></div>
     <script>
+        document.getElementById('log').innerHTML = [
+            '<p>window.innerWidth: '+window.innerWidth+'</p>',
+            '<p>window.innerHeight: '+window.innerHeight+'</p>',
+            '<p>navigator.userAgent: '+navigator.userAgent+'</p>',
+        ].join('');
+
         document.getElementById('submit').onclick = function()
         {
             window.location = 'about:blank';
