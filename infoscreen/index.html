@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Infoscreen</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        #wrap {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: row;
+        }
+
+        #list {
+            background-color: #e5e5e5;
+            height: 100vh;
+            width: 30vw;
+            padding: 2rem;
+        }
+
+        #list p {
+            cursor: pointer;
+        }
+
+        #doc {
+            width: 70vw;
+            height: 100vh;
+        }
+
+        #canvas {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="list"></div>
+        <div id="doc">
+            <canvas id="canvas"></canvas>
+            <img id="preview">
+        </div>
+    </div>
+    <script src="//mozilla.github.io/pdf.js/build/pdf.mjs" type="module"></script>
+    <script type="module">
+        function base64ToBytes(base64) {
+            const binString = atob(base64);
+            return Uint8Array.from(binString, (m) => m.codePointAt(0));
+        }
+
+        function bytesToBase64(bytes) {
+            const binString = Array.from(bytes, (byte) =>
+                String.fromCodePoint(byte),
+            ).join("");
+            return btoa(binString);
+        }
+
+        var apiKey = 'AIzaSyCJviuF22On0E4TsWsfNLuhDoQOYTPlYuU';
+
+        // Loaded via <script> tag, create shortcut to access PDF.js exports.
+        var { pdfjsLib } = globalThis;
+
+        // The workerSrc property shall be specified.
+        pdfjsLib.GlobalWorkerOptions.workerSrc = '//mozilla.github.io/pdf.js/build/pdf.worker.mjs';
+
+        function loadFile(fileId, page) {
+            var url = 'https://www.googleapis.com/drive/v3/files/' + fileId + '?key=' + apiKey + '&alt=media&source=downloadUrl';
+
+            var pageNumber = 1;
+
+            if (typeof page === 'number') {
+                pageNumber = page;
+            }
+
+            var cache = localStorage.getItem(fileId + '-' + pageNumber);
+
+            var params;
+
+            if (cache === null) {
+
+                // Asynchronous download of PDF
+                var loadingTask = pdfjsLib.getDocument(url);
+
+                loadingTask.promise.then(function(pdf) {
+
+                    console.log('PDF loaded');
+
+                    console.log(pdf);
+
+                    pdf.getPage(pageNumber).then(function(page) {
+                        console.log('Page loaded');
+
+                        // var scale = 1.5;
+                        var scale = 1;
+                        var viewport = page.getViewport({ scale: scale });
+
+                        // Prepare canvas using PDF page dimensions
+                        var canvas = document.getElementById('canvas');
+                        var context = canvas.getContext('2d');
+                        canvas.height = viewport.height;
+                        canvas.width = viewport.width;
+
+                        // Render PDF page into canvas context
+                        var renderContext = {
+                            canvasContext: context,
+                            viewport: viewport
+                        };
+
+                        var renderTask = page.render(renderContext);
+
+                        renderTask.promise.then(function () {
+                            console.log('Page rendered');
+
+                            var dataUrl = canvas.toDataURL();
+
+                            // Save page to localstorage
+                            localStorage.setItem(fileId + '-' + pageNumber, dataUrl);
+
+                            document.getElementById('preview').src = dataUrl;
+                        });
+                    });
+
+                }, function (reason) {
+                    // PDF loading error
+                    console.error(reason);
+                });
+
+            } else {
+
+                document.getElementById('preview').src = cache;
+
+            }
+        };
+
+        function reqListener() {
+            var list = document.getElementById('list');
+
+            var data = JSON.parse(this.responseText);
+
+            for (var f in data.files) {
+                var file = data.files[f];
+                var p = document.createElement('p');
+                p.dataset.fileId = file.id;
+
+                var name = file.name;
+                var i = name.lastIndexOf('.');
+                if (i > 0) {
+                    name = name.substring(0, i);
+                }
+                p.textContent = name;
+
+                list.appendChild(p);
+
+                p.onclick = function () {
+                    console.log(this.dataset.fileId);
+                    // loadFile('https://drive.google.com/uc?export=download&id='+this.dataset.fileId);
+                    // loadFile('https://www.googleapis.com/drive/v3/files/' + this.dataset.fileId + '?key=' + apiKey + '&alt=media&source=downloadUrl');
+                    loadFile(this.dataset.fileId);
+                };
+            }
+        }
+
+        const req = new XMLHttpRequest();
+        req.addEventListener("load", reqListener);
+        req.open("GET", "https://www.googleapis.com/drive/v3/files?q='13BuqfWggTgSqG2tmzZ3nycEAOc-OEbrJ'+in+parents&key=" + apiKey);
+        req.send();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Signatur</title>
+    <style>
+        .signature {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .signature > *:nth-child(1) {
+            flex: 2;
+        }
+
+        .signature > *:nth-child(2) {
+            flex: 1;
+        }
+
+        .signature + .signature {
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="signature">
+        <div id="optinor">
+            <p>Med venlig hilsen</p>
+            <p><strong>Jonas Westergaard</strong></p>
+            <img src="https://optinor.dk/assets/gmail/optinor.png" width="120" alt="Optinor logo">
+        </div>
+        <button onclick="copyToClipboard('optinor')">Kopiér</button>
+    </div>
+    <div class="signature">
+        <div id="glass-security">
+            <p>Med venlig hilsen</p>
+            <p><strong>Jonas Westergaard</strong></p>
+            <img src="https://glass-security.dk/assets/gmail/ngs.png" width="120" alt="Nordic Glass Security logo">
+        </div>
+        <button onclick="copyToClipboard('glass-security')">Kopiér</button>
+    </div>
+    <div class="signature">
+        <div id="solfilm-dk">
+            <p>Med venlig hilsen</p>
+            <p><strong>Jonas Westergaard</strong></p>
+            <img src="https://solfilm.dk/assets/gmail/solfilm.dk.png" width="120" alt="Solfilm.dk logo">
+        </div>
+        <button onclick="copyToClipboard('solfilm-dk')">Kopiér</button>
+    </div>
+    <script>
+        const copyToClipboard = function(id)
+        {
+            console.log(id);
+
+            const elm = document.getElementById(id);
+
+            console.log(elm);
+
+            if (!elm) {
+                return;
+            }
+
+            navigator.permissions.query({ name: "clipboard-write" }).then(
+                (result) => {
+                    console.log(result);
+    
+                    if (!(result.state == "granted" || result.state == "prompt")) {
+                        return;
+                    }
+    
+                    navigator.clipboard.writeText(elm.outerHTML).then(
+                        (res) => {
+                            console.log('Content copied to clipboard', res);
+                            /* Resolved - text copied to clipboard successfully */
+                        },
+                        (err) => {
+                            console.error('Failed to copy', err);
+                            /* Rejected - text failed to copy to the clipboard */
+                        }
+                    );
+                }
+            );
+        }
+    </script>
+</body>
+</html>
