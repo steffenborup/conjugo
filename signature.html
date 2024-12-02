@@ -27,29 +27,57 @@
 <body>
     <div class="signature">
         <div id="optinor">
-            <p>Med venlig hilsen</p>
-            <p><strong>Jonas Westergaard</strong></p>
-            <img src="https://optinor.dk/assets/gmail/optinor.png" width="120" alt="Optinor logo">
+            <div>
+                <p>Med venlig hilsen</p>
+                <p><strong>Jonas Westergaard</strong></p>
+                <img src="https://optinor.dk/assets/gmail/optinor.png" width="120" alt="Optinor logo">
+            </div>
         </div>
-        <button onclick="copyToClipboard('optinor')">Kopiér</button>
+        <button onclick="copySignature('optinor')">Kopiér</button>
     </div>
     <div class="signature">
         <div id="glass-security">
-            <p>Med venlig hilsen</p>
-            <p><strong>Jonas Westergaard</strong></p>
-            <img src="https://glass-security.dk/assets/gmail/ngs.png" width="120" alt="Nordic Glass Security logo">
+            <div>
+                <p>Med venlig hilsen</p>
+                <p><strong>Jonas Westergaard</strong></p>
+                <img src="https://glass-security.dk/assets/gmail/ngs.png" width="120" alt="Nordic Glass Security logo">
+            </div>
         </div>
-        <button onclick="copyToClipboard('glass-security')">Kopiér</button>
+        <button onclick="copySignature('glass-security')">Kopiér</button>
     </div>
     <div class="signature">
         <div id="solfilm-dk">
-            <p>Med venlig hilsen</p>
-            <p><strong>Jonas Westergaard</strong></p>
-            <img src="https://solfilm.dk/assets/gmail/solfilm.dk.png" width="120" alt="Solfilm.dk logo">
+            <div>
+                <p>Med venlig hilsen</p>
+                <p><strong>Jonas Westergaard</strong></p>
+                <img src="https://solfilm.dk/assets/gmail/solfilm.dk.png" width="120" alt="Solfilm.dk logo">
+            </div>
         </div>
-        <button onclick="copyToClipboard('solfilm-dk')">Kopiér</button>
+        <button onclick="copySignature('solfilm-dk')">Kopiér</button>
     </div>
     <script>
+        function copySignature(id) {
+
+            console.log(id);
+
+            const elm = document.getElementById(id);
+
+            console.log(elm);
+
+            const type = "text/html";
+            const blob = new Blob([elm.innerHTML], {type});
+            const data = [new ClipboardItem({[type]: blob})];
+
+            navigator.clipboard.write(data).then(
+                function(){
+                    console.log('copied!');
+                },
+                function(){
+                    console.log('copy failed');
+                }
+            );
+        };
+
         const copyToClipboard = function(id)
         {
             console.log(id);
