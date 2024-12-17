@@ -34,7 +34,7 @@
     "Sites": [
         {
             "SiteNo": 2,
-            "SiteID": "Sample/DK/Site0002",
+            "SiteID": "TEST/DK/Site0016",
             "CompanyNo": 475,
             "Name": "Åbyhøj",
             "Address": {
@@ -59,7 +59,7 @@
         },
         {
             "SiteNo": 3,
-            "SiteID": "Sample/DK/Site0003",
+            "SiteID": "TEST/DK/Site0016",
             "CompanyNo": 475,
             "Name": "Åhave",
             "Address": {
@@ -84,7 +84,7 @@
         },
         {
             "SiteNo": 4,
-            "SiteID": "Sample/DK/Site0004",
+            "SiteID": "TEST/DK/Site0016",
             "CompanyNo": 475,
             "Name": "Viby J",
             "Address": {
@@ -110,7 +110,7 @@
         },
         {
             "SiteNo": 5,
-            "SiteID": "Sample/DK/Site0005",
+            "SiteID": "TEST/DK/Site0016",
             "CompanyNo": 475,
             "Name": "Mårslet",
             "Address": {
@@ -139,7 +139,7 @@
         },
         {
             "SiteNo": 6,
-            "SiteID": "Sample/DK/Site0006",
+            "SiteID": "TEST/DK/Site0016",
             "CompanyNo": 475,
             "Name": "Fredensvang",
             "Address": {
@@ -167,7 +167,7 @@
         },
         {
             "SiteNo": 7,
-            "SiteID": "Sample/DK/Site0007",
+            "SiteID": "TEST/DK/Site0016",
             "CompanyNo": 475,
             "Name": "S. Frichs",
             "Address": {
@@ -192,7 +192,7 @@
         },
         {
             "SiteNo": 8,
-            "SiteID": "Sample/DK/Site0008",
+            "SiteID": "TEST/DK/Site0016",
             "CompanyNo": 475,
             "Name": "Beder",
             "Address": {
@@ -219,7 +219,7 @@
         },
         {
             "SiteNo": 9,
-            "SiteID": "Sample/DK/Site0009",
+            "SiteID": "TEST/DK/Site0016",
             "CompanyNo": 475,
             "Name": "Rosenhøj",
             "Address": {
@@ -244,7 +244,7 @@
         },
         {
             "SiteNo": 10,
-            "SiteID": "Sample/DK/Site0010",
+            "SiteID": "TEST/DK/Site0016",
             "CompanyNo": 475,
             "Name": "Ormslevvej",
             "Address": {
@@ -270,7 +270,7 @@
         },
         {
             "SiteNo": 11,
-            "SiteID": "Sample/DK/Site0011",
+            "SiteID": "TEST/DK/Site0016",
             "CompanyNo": 475,
             "Name": "Viby Syd",
             "Address": {
@@ -299,7 +299,7 @@
         },
         {
             "SiteNo": 12,
-            "SiteID": "Sample/DK/Site0012",
+            "SiteID": "TEST/DK/Site0016",
             "CompanyNo": 475,
             "Name": "Tranbjerg",
             "Address": {
@@ -326,7 +326,7 @@
         },
         {
             "SiteNo": 13,
-            "SiteID": "Sample/DK/Site0013",
+            "SiteID": "TEST/DK/Site0016",
             "CompanyNo": 475,
             "Name": "Stenvej",
             "Address": {
@@ -352,7 +352,7 @@
         },
         {
             "SiteNo": 14,
-            "SiteID": "Sample/DK/Site0014",
+            "SiteID": "TEST/DK/Site0016",
             "CompanyNo": 475,
             "Name": "Oddervej",
             "Address": {
@@ -379,7 +379,7 @@
         },
         {
             "SiteNo": 15,
-            "SiteID": "Sample/DK/Site0015",
+            "SiteID": "TEST/DK/Site0016",
             "CompanyNo": 475,
             "Name": "Sletvej",
             "Address": {
@@ -405,7 +405,7 @@
         },
         {
             "SiteNo": 16,
-            "SiteID": "Sample/DK/Site0016",
+            "SiteID": "TEST/DK/Site0016",
             "CompanyNo": 475,
             "Name": "Højbjerg",
             "Address": {
@@ -431,7 +431,7 @@
         },
         {
             "SiteNo": 17,
-            "SiteID": "Sample/DK/Site0017",
+            "SiteID": "TEST/DK/Site0016",
             "CompanyNo": 475,
             "Name": "Rosenvang",
             "Address": {
@@ -457,7 +457,7 @@
         },
         {
             "SiteNo": 18,
-            "SiteID": "Sample/DK/Site0018",
+            "SiteID": "TEST/DK/Site0016",
             "CompanyNo": 475,
             "Name": "Harken",
             "Address": {
@@ -483,7 +483,7 @@
         },
         {
             "SiteNo": 20,
-            "SiteID": "Sample/DK/Site0020",
+            "SiteID": "TEST/DK/Site0016",
             "CompanyNo": 475,
             "Name": "Bjarne",
             "Address": {
@@ -509,7 +509,7 @@
         },
         {
             "SiteNo": 21,
-            "SiteID": "Sample/DK/Site0021",
+            "SiteID": "TEST/DK/Site0016",
             "CompanyNo": 475,
             "Name": "Præstø",
             "Address": {
@@ -535,7 +535,7 @@
         },
         {
             "SiteNo": 22,
-            "SiteID": "Sample/DK/Site0022",
+            "SiteID": "TEST/DK/Site0016",
             "CompanyNo": 475,
             "Name": "Ny Esbjergvej",
             "Address": {
@@ -561,7 +561,7 @@
         },
         {
             "SiteNo": 23,
-            "SiteID": "Sample/DK/Site0023",
+            "SiteID": "TEST/DK/Site0016",
             "CompanyNo": 475,
             "Name": "Bårse",
             "Address": {
@@ -587,7 +587,7 @@
         },
         {
             "SiteNo": 24,
-            "SiteID": "Sample/DK/Site0024",
+            "SiteID": "TEST/DK/Site0016",
             "CompanyNo": 475,
             "Name": "Skanderborg",
             "Address": {
@@ -613,7 +613,7 @@
         },
         {
             "SiteNo": 25,
-            "SiteID": "Sample/DK/Site0025",
+            "SiteID": "TEST/DK/Site0016",
             "CompanyNo": 475,
             "Name": "Conjugo",
             "Address": {
