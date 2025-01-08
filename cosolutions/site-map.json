@@ -499,7 +499,8 @@
                 "MAP LOCAL CARDS",
                 "MAP RME100",
                 "MAP B7",
-                "MAP HGV"
+                "MAP HGV",
+                "MAP APP TANK"
             ],
             "MarkerColor": "FF0000",
             "Position": {
@@ -525,7 +526,8 @@
                 "MAP LOCAL CARDS",
                 "MAP RME100",
                 "MAP B7",
-                "MAP HGV"
+                "MAP HGV",
+                "MAP APP TANK"
             ],
             "MarkerColor": "FF0000",
             "Position": {
@@ -551,7 +553,8 @@
                 "MAP LOCAL CARDS",
                 "MAP RME100",
                 "MAP B7",
-                "MAP HGV"
+                "MAP HGV",
+                "MAP APP TANK"
             ],
             "MarkerColor": "FF0000",
             "Position": {
@@ -577,7 +580,8 @@
                 "MAP LOCAL CARDS",
                 "MAP RME100",
                 "MAP B7",
-                "MAP HGV"
+                "MAP HGV",
+                "MAP APP TANK"
             ],
             "MarkerColor": "FF0000",
             "Position": {
@@ -722,6 +726,13 @@
         },
         {
             "CompanyNo": 475,
+            "TagName": "MAP APP TANK",
+            "Description": "Cardholder App",
+            "IconUrl": null,
+            "Type": "PAYMENT"
+        },
+        {
+            "CompanyNo": 475,
             "TagName": "MAP 95 BF",
             "Description": "Petrol 95 Octane",
             "IconUrl": "https://assets.codatahost.com/apps/customerapp/v2/map-icons/95UL-icon-path.svg",
@@ -774,7 +785,8 @@
             "Tags": [
                 "MAP VISA",
                 "MAP MASTERCARD",
-                "MAP LOCAL CARDS"
+                "MAP LOCAL CARDS",
+                "MAP APP TANK"
             ]
         },
         {
