@@ -499,8 +499,7 @@
                 "MAP LOCAL CARDS",
                 "MAP RME100",
                 "MAP B7",
-                "MAP HGV",
-                "MAP APP TANK"
+                "MAP HGV"
             ],
             "MarkerColor": "FF0000",
             "Position": {
@@ -526,8 +525,7 @@
                 "MAP LOCAL CARDS",
                 "MAP RME100",
                 "MAP B7",
-                "MAP HGV",
-                "MAP APP TANK"
+                "MAP HGV"
             ],
             "MarkerColor": "FF0000",
             "Position": {
@@ -553,8 +551,7 @@
                 "MAP LOCAL CARDS",
                 "MAP RME100",
                 "MAP B7",
-                "MAP HGV",
-                "MAP APP TANK"
+                "MAP HGV"
             ],
             "MarkerColor": "FF0000",
             "Position": {
@@ -580,8 +577,7 @@
                 "MAP LOCAL CARDS",
                 "MAP RME100",
                 "MAP B7",
-                "MAP HGV",
-                "MAP APP TANK"
+                "MAP HGV"
             ],
             "MarkerColor": "FF0000",
             "Position": {
@@ -637,8 +633,7 @@
                 "MAP RME100",
                 "MAP B7",
                 "MAP HGV",
-                "MAP PRIVATE",
-                "MAP APP TANK"
+                "MAP PRIVATE"
             ],
             "MarkerColor": "0000FF",
             "Position": {
