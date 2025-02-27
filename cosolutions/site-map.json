@@ -632,8 +632,7 @@
                 "MAP 95 BF",
                 "MAP RME100",
                 "MAP B7",
-                "MAP HGV",
-                "MAP APP TANK"
+                "MAP HGV"
             ],
             "MarkerColor": "0000FF",
             "Position": {
