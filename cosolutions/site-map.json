@@ -721,13 +721,6 @@
         },
         {
             "CompanyNo": 475,
-            "TagName": "MAP APP TANK",
-            "Description": "Cardholder App",
-            "IconUrl": null,
-            "Type": "PAYMENT"
-        },
-        {
-            "CompanyNo": 475,
             "TagName": "MAP 95 BF",
             "Description": "Petrol 95 Octane",
             "IconUrl": "https://assets.codatahost.com/apps/customerapp/v2/map-icons/95UL-icon-path.svg",
