@@ -637,7 +637,8 @@
                 "MAP RME100",
                 "MAP B7",
                 "MAP HGV",
-                "MAP PRIVATE"
+                "MAP PRIVATE",
+                "MAP APP TANK"
             ],
             "MarkerColor": "0000FF",
             "Position": {
