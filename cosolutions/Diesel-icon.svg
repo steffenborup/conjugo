@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="svg93" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" version="1.1" viewBox="0 0 512 512">
+  <!-- Generator: Adobe Illustrator 29.3.1, SVG Export Plug-In . SVG Version: 2.1.0 Build 151)  -->
+  <defs>
+    <style>
+      .st0 {
+        isolation: isolate;
+      }
+
+      .st1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <sodipodi:namedview id="namedview95" bordercolor="#666666" borderopacity="1" gridtolerance="10" guidetolerance="10" inkscape:current-layer="g91" inkscape:cx="361.55966" inkscape:cy="224.941" inkscape:document-rotation="0" inkscape:pageopacity="0" inkscape:pageshadow="2" inkscape:window-height="1137" inkscape:window-maximized="1" inkscape:window-width="1920" inkscape:window-x="-8" inkscape:window-y="-8" inkscape:zoom="1.3307503" objecttolerance="10" pagecolor="#ffffff" showgrid="false"/>
+  <g id="g91">
+    <g id="g86">
+      <g id="use80">
+        <path id="c4CLnPZZv" d="M512,256c0,141.3-114.8,256-256,256S0,397.3,0,256,114.7,0,256,0s256,114.7,256,256Z"/>
+      </g>
+      <g id="g84">
+        <g id="use82">
+          <path id="c4CLnPZZv1" data-name="c4CLnPZZv" d="M512,256c0,141.3-114.8,256-256,256S0,397.3,0,256,114.7,0,256,0s256,114.7,256,256Z"/>
+        </g>
+      </g>
+    </g>
+    <g id="text148" class="st0">
+      <g class="st0">
+        <path class="st1" d="M250.3,352.9h-82.7v-191.9h82.7c11.9.2,21.8,1.6,29.7,4.2,13.5,4.4,24.3,12.5,32.7,24.3,6.7,9.5,11.2,19.9,13.7,31,2.4,11.1,3.6,21.7,3.6,31.8,0,25.5-5.1,47.1-15.4,64.8-13.9,23.9-35.3,35.8-64.3,35.8ZM280.1,210c-6.2-10.4-18.4-15.6-36.6-15.6h-37v125.3h37c18.9,0,32.1-9.3,39.6-28,4.1-10.2,6.1-22.4,6.1-36.6s-3-34.5-9.1-45.1Z"/>
+      </g>
+    </g>
+  </g>
+</svg>
