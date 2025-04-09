@@ -1,0 +1,99 @@
+
+<html>
+<body>
+    <style>
+        iframe[name=htpIframe0] {
+            border: none;
+            width: 100%;
+        }
+    </style>
+
+    <div style="visibility: hidden;" class="input-form">
+
+        <div id="div-hosted-tokenization"></div>
+
+        <div>
+            <input id="cb1" type="checkbox" onchange="updateSubmitButton()">
+            Remember my payment details
+What details are being stored?
+To make payment easier, we store all details except the security code. This helps to keep your payment secure.
+Where are my details stored?
+Your payment details are securely stored with your account. You can choose to update or delete these details by contacting the merchant.
+            </input>
+        </div>
+        <div>
+            <input id="cb2" type="checkbox" onchange="updateSubmitButton()">
+              Accept our business terms and coditions.
+            </input>
+        </div>
+
+        <button id="submitButton" onclick="submitForm()" disabled="true">submit</button>
+        <div>
+            ToDo: Add a Cancel button.
+        </div>
+    </div>
+
+    <script src="https://payment.preprod.direct.worldline-solutions.com/hostedtokenization/js/client/tokenizer.min.js"></script> <!-- contains the methods needed for tokenization -->
+    <script>
+        const urlParams = new Proxy(new URLSearchParams(window.location.search), {
+            get: (searchParams, prop) => searchParams.get(prop),
+        });
+
+        var hostedTokenizationUrl = urlParams.url; //'https://payment.preprod.direct.worldline-solutions.com/hostedtokenization/tokenization/form/bbccadc5096e4cf7a3d4c212ebe90e0b';
+        // to tokenise credit card data. Load it to the form into an existing DOM element on your check-out page
+
+        var options = {
+            hideCardholderName: false,
+            locale: "dk_DK"
+            //,threeDSecureOptions: {}
+        };
+        //alert('DEBUG');
+        //debugger;
+        var tokenizer = new Tokenizer(hostedTokenizationUrl, 'div-hosted-tokenization', options);
+
+
+        tokenizer.initialize().then(() => {
+            // Do work after initialization
+
+
+            console.log('tokenizer has been initialized');
+
+            debugger;
+
+            setTimeout(() => {
+                // Make the form visible in 50ms to avoid layout flicking while it is being generated.
+                for (let el of document.querySelectorAll('.input-form')) {
+                    el.style.visibility = 'visible';
+                }
+                
+            }, 50);
+
+        })
+            .catch(reason => {
+                // Handle iFrame load error
+            })
+
+        function updateSubmitButton() {
+            let btn = document.getElementById('submitButton'); 
+            let cb1 = document.getElementById('cb1'); 
+            let cb2 = document.getElementById('cb2'); 
+            debugger;
+            btn.disabled = !(cb1.checked && cb2.checked);
+        }
+
+        function submitForm() { //
+            let e = {
+                //storePermanently: true // Store 
+            };
+            tokenizer.submitTokenization(e).then((result) => {
+                if (result.success) {
+                    // Proceed
+                    //location.href = urlParams.returnurl || 'about:blank';
+                } else {
+                    // displayErrorMessage(result.error.message);
+                }
+            });
+        }
+    </script>
+</body>
+</html>
