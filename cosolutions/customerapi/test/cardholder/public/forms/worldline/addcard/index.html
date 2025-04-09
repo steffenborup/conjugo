@@ -95,14 +95,22 @@ Your payment details are securely stored with your account. You can choose to up
             let e = {
                 //storePermanently: true // Store 
             };
-            tokenizer.submitTokenization(e).then((result) => {
-                if (result.success) {
-                    // Proceed
-                    //location.href = urlParams.returnurl || 'about:blank';
-                } else {
-                    // displayErrorMessage(result.error.message);
+            tokenizer.submitTokenization(e).then(
+                (result) => {
+                    console.log('SUCCESS');
+                    console.log(result);
+                    if (result.success) {
+                        // Proceed
+                        //location.href = urlParams.returnurl || 'about:blank';
+                    } else {
+                        // displayErrorMessage(result.error.message);
+                    }                
+                },
+                (error) => {
+                    console.log('ERROR');
+                    console.log(error);
                 }
-            });
+            );
         }
     </script>
 </body>
