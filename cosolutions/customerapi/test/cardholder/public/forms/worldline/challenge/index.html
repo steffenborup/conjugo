@@ -1,0 +1,22 @@
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+</head>
+<body>
+    <h1>Worldline Challenge</h1>
+    <button onclick="approveChallenge()">Approve</button>
+    <script>
+        function approveChallenge()
+        {
+            const params = new URLSearchParams(window.location.search);
+
+            if (params.has('returnUrl'))
+            {
+                window.location = params.get('returnUrl');
+            }
+        }
+    </script>
+</body>
+</html>
