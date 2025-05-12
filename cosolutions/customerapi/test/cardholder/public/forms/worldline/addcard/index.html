@@ -18,6 +18,11 @@
             display: block;
         }
 
+        iframe[name=htpIframe0] {
+            border: none;
+            width: 100%;
+        }
+
         #form-actions {
             padding: 1.25rem;
         }
@@ -63,35 +68,83 @@
     </style>
 </head>
 <body>
-    <style>
-        iframe[name=htpIframe0] {
-            border: none;
-            width: 100%;
-        }
-    </style>
-    <div id="form">
-        <div id="div-hosted-tokenization"></div>
-        <div id="form-actions">
-            <div class="input-checkbox">
-                <input id="cb1" type="checkbox" />
-                <label for="cb1">Remember my payment details</label>
-                <p>
-                    <strong>What details are being stored?</strong> To make payment easier, we store all details except the security code. This helps to keep your payment secure.<br>
-                </p>
-                <p>
-                    <strong>Where are my details stored?</strong> Your payment details are securely stored with your account. You can choose to update or delete these details by contacting the merchant.
-                </p>
+    <script type="text/html" id="tmpl">        
+        <div id="form">
+            <div id="div-hosted-tokenization"></div>
+            <div id="form-actions">
+                <div class="input-checkbox">
+                    <input id="cb1" type="checkbox" />
+                    <label for="cb1">Remember my payment details</label>
+                    <p>
+                        <strong>What details are being stored?</strong> To make payment easier, we store all details except the security code. This helps to keep your payment secure.
+                    </p>
+                    <p>
+                        <strong>Where are my details stored?</strong> Your payment details are securely stored with your account. You can choose to update or delete these details by contacting the merchant.
+                    </p>
+                </div>
+                <div class="input-checkbox">
+                    <input id="cb2" type="checkbox" />
+                    <label for="cb2">Accept our business terms and conditions</label>
+                </div>
+                <button id="submit-button" disabled="true">Save</button>
             </div>
-            <div class="input-checkbox">
-                <input id="cb2" type="checkbox" />
-                <label for="cb2">Accept our business terms and conditions.</label>
-            </div>
-            <button id="submit-button" disabled="true">Save</button>
         </div>
-    </div>
-
+    </script>
     <script src="https://payment.preprod.direct.worldline-solutions.com/hostedtokenization/js/client/tokenizer.min.js"></script> <!-- contains the methods needed for tokenization -->
     <script>
+        String.prototype.template = function (d) {
+            return this.replace(/\{([^\}]+)\}/g, function (m, n) {
+                var o = d, p = n.split('|')[0].split('.');
+                for (var i = 0; i < p.length; i++) {
+                    o = typeof o[p[i]] === "function" ? o[p[i]]() : o[p[i]];
+                    if (typeof o === "undefined" || o === null) return n.indexOf('|') !== -1 ? n.split('|')[1] : m;
+                }
+                return o;
+            });
+        };
+
+        const strings = {
+            da: {
+                rememberPaymentDetails: 'Husk mine betalingsoplysninger',
+                whatDetailsAreStored: '<strong>Hvilke oplysninger gemmes?</strong> For at gøre betaling nemmere, gemmer vi alle indtastede informationer undtagen CVC-koden. Dette bidrager til at holde dine betalinger sikre.',
+                whereAreDetailsStored: '<strong>Hvor gemmes mine oplysninger?</strong> Dine betalingsoplysninger gemmes sikkert på din konto. Du kan vælge at opdatere eller slette disse oplysninger ved at kontakte forhandleren.',
+                acceptTermsConditions: 'Acceptér vores forretningsbetingelser',
+                save: 'Gem'
+            },
+            en: {
+                rememberPaymentDetails: 'Remember my payment details',
+                whatDetailsAreStored: '<strong>What details are being stored?</strong> To make payment easier, we store all details except the security code. This helps to keep your payment secure.',
+                whereAreDetailsStored: '<strong>Where are my details stored?</strong> Your payment details are securely stored with your account. You can choose to update or delete these details by contacting the merchant.',
+                acceptTermsConditions: 'Accept our business terms and conditions',
+                save: 'Save'
+            },
+            nb: {
+                rememberPaymentDetails: 'Remember my payment details',
+                whatDetailsAreStored: '<strong>Hvilken informasjon lagres?</strong> For å gjøre betalingen enklere lagrer vi all oppgitt informasjon unntatt CVC-koden. Dette bidrar til å holde betalingene dine sikre.',
+                whereAreDetailsStored: '<strong>Hvor lagres informasjonen min?</strong> Betalingsinformasjonen din lagres sikkert på kontoen din. Du kan velge å oppdatere eller slette denne informasjonen ved å kontakte forhandleren.',
+                acceptTermsConditions: 'Godta våre forretningsvilkår',
+                save: 'Lagre'
+            }
+        };
+
+        let translatedStrings = strings['en'];
+
+        try
+        {
+            const language = navigator.language.substring(0, 2);
+            
+            if (strings[language] !== undefined)
+            {
+                translatedStrings = strings[language];
+            }
+        }
+        catch (e)
+        {
+            console.log('Error when translating.');
+        }
+
+        document.write(document.getElementById('tmpl').innerHTML.template(translatedStrings));
+
         const submitButton = document.getElementById('submit-button');
         const checkbox1 = document.getElementById('cb1');
         const checkbox2 = document.getElementById('cb2');
@@ -167,13 +220,11 @@
 
         submitButton.addEventListener('click', submitForm());
 
-        alert(navigator.language);
-
         const brandColor = urlParams.brandColor;
 
         if (typeof brandColor === 'string' && brandColor !== '')
         {
-            document.body.style.setProperty('--brand-color', '#'+brandColor);
+            document.body.style.setProperty('--brand-color', brandColor);
         }
     </script>
 </body>
