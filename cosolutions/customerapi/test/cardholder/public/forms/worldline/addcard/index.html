@@ -5,11 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <style>
         body {
+            --brand-color: #000;
             background-color: #f2f2f4;
+            margin: 0;
+            padding: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.2em;
         }
+
         iframe {
             position: relative;
             display: block;
+        }
+
+        #form-actions {
+            padding: 1.25rem;
+        }
+
+        .input-checkbox {
+            position: relative;
+            display: block;
+            padding-left: 2rem;
+            margin: 1rem 0;
+        }
+
+        .input-checkbox input[type="checkbox"] {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .input-checkbox label {
+            display: block;
+        }
+
+        .input-checkbox p {
+            font-size: 85%;
+            line-height: 1.2;
+        }
+
+        #submit-button {
+            display: block;
+            width: 100%;
+            background-color: var(--brand-color);
+            font-size: 1rem;
+            font-weight: bold;
+            color: #fff;
+            border: none;
+            border-radius: 1.5rem;
+            height: 3rem;
+            margin: 2rem 0 0;
+        }
+
+        #submit-button:disabled {
+            background-color: #ccc !important;
         }
     </style>
 </head>
@@ -20,81 +69,77 @@
             width: 100%;
         }
     </style>
-
-    <div style="visibility: hidden;" class="input-form">
-
+    <div id="form">
         <div id="div-hosted-tokenization"></div>
-
-        <div>
-            <input id="cb1" type="checkbox" onchange="updateSubmitButton()">
-            Remember my payment details
-What details are being stored?
-To make payment easier, we store all details except the security code. This helps to keep your payment secure.
-Where are my details stored?
-Your payment details are securely stored with your account. You can choose to update or delete these details by contacting the merchant.
-            </input>
-        </div>
-        <div>
-            <input id="cb2" type="checkbox" onchange="updateSubmitButton()">
-              Accept our business terms and coditions.
-            </input>
-        </div>
-
-        <button id="submitButton" onclick="submitForm()" disabled="true">submit</button>
-        <div>
-            ToDo: Add a Cancel button.
+        <div id="form-actions">
+            <div class="input-checkbox">
+                <input id="cb1" type="checkbox" />
+                <label for="cb1">Remember my payment details</label>
+                <p>
+                    <strong>What details are being stored?</strong> To make payment easier, we store all details except the security code. This helps to keep your payment secure.<br>
+                </p>
+                <p>
+                    <strong>Where are my details stored?</strong> Your payment details are securely stored with your account. You can choose to update or delete these details by contacting the merchant.
+                </p>
+            </div>
+            <div class="input-checkbox">
+                <input id="cb2" type="checkbox" />
+                <label for="cb2">Accept our business terms and conditions.</label>
+            </div>
+            <button id="submit-button" disabled="true">Save</button>
         </div>
     </div>
 
     <script src="https://payment.preprod.direct.worldline-solutions.com/hostedtokenization/js/client/tokenizer.min.js"></script> <!-- contains the methods needed for tokenization -->
     <script>
+        const submitButton = document.getElementById('submit-button');
+        const checkbox1 = document.getElementById('cb1');
+        const checkbox2 = document.getElementById('cb2');
+
         const urlParams = new Proxy(new URLSearchParams(window.location.search), {
             get: (searchParams, prop) => searchParams.get(prop),
         });
 
-        var hostedTokenizationUrl = urlParams.url; //'https://payment.preprod.direct.worldline-solutions.com/hostedtokenization/tokenization/form/bbccadc5096e4cf7a3d4c212ebe90e0b';
+        const hostedTokenizationUrl = urlParams.url; //'https://payment.preprod.direct.worldline-solutions.com/hostedtokenization/tokenization/form/bbccadc5096e4cf7a3d4c212ebe90e0b';
         // to tokenise credit card data. Load it to the form into an existing DOM element on your check-out page
 
-        var options = {
+        let options = {
             hideCardholderName: false,
             locale: "dk_DK"
             //,threeDSecureOptions: {}
         };
+
         //alert('DEBUG');
         //debugger;
-        var tokenizer = new Tokenizer(hostedTokenizationUrl, 'div-hosted-tokenization', options);
 
+        const tokenizer = new Tokenizer(hostedTokenizationUrl, 'div-hosted-tokenization', options);
 
-        tokenizer.initialize().then(() => {
-            // Do work after initialization
+        tokenizer.initialize()
+            .then(() => {
+                // Do work after initialization
+                console.log('tokenizer has been initialized');
 
+                // debugger;
 
-            console.log('tokenizer has been initialized');
-
-            // debugger;
-
-            setTimeout(() => {
-                // Make the form visible in 50ms to avoid layout flicking while it is being generated.
-                for (let el of document.querySelectorAll('.input-form')) {
-                    el.style.visibility = 'visible';
-                }
-                
-            }, 50);
-
-        })
+                setTimeout(() => {
+                    // Make the form visible in 50ms to avoid layout flicking while it is being generated.
+                    // for (let el of document.querySelectorAll('.input-form')) {
+                    //     el.style.visibility = 'visible';
+                    // }
+                    document.getElementById('form').style.visibility = 'visible';
+                }, 50);
+            })
             .catch(reason => {
                 // Handle iFrame load error
             })
 
         function updateSubmitButton() {
-            let btn = document.getElementById('submitButton'); 
-            let cb1 = document.getElementById('cb1'); 
-            let cb2 = document.getElementById('cb2'); 
             // debugger;
-            btn.disabled = !(cb1.checked && cb2.checked);
+            submitButton.disabled = !(checkbox1.checked && checkbox2.checked);
         }
 
         function submitForm() { //
+            return;
             let e = {
                 //storePermanently: true // Store 
             };
@@ -107,13 +152,28 @@ Your payment details are securely stored with your account. You can choose to up
                         location.href = urlParams.returnurl || 'about:blank';
                     } else {
                         // displayErrorMessage(result.error.message);
-                    }                
+                    }
                 },
                 (error) => {
                     console.log('ERROR');
                     console.log(error);
                 }
             );
+        }
+
+        document.querySelectorAll('#form-actions input[type="checkbox"]').forEach((x) => {
+            x.addEventListener('change', updateSubmitButton);
+        });
+
+        submitButton.addEventListener('click', submitForm());
+
+        alert(navigator.language);
+
+        const brandColor = urlParams.brandColor;
+
+        if (typeof brandColor === 'string' && brandColor !== '')
+        {
+            document.body.style.setProperty('--brand-color', '#'+brandColor);
         }
     </script>
 </body>
