@@ -74,19 +74,15 @@
             <div id="form-actions">
                 <div class="input-checkbox">
                     <input id="cb1" type="checkbox" />
-                    <label for="cb1">Remember my payment details</label>
-                    <p>
-                        <strong>What details are being stored?</strong> To make payment easier, we store all details except the security code. This helps to keep your payment secure.
-                    </p>
-                    <p>
-                        <strong>Where are my details stored?</strong> Your payment details are securely stored with your account. You can choose to update or delete these details by contacting the merchant.
-                    </p>
+                    <label for="cb1">{rememberPaymentDetails}</label>
+                    <p>{whatDetailsAreStored}</p>
+                    <p>{whereAreDetailsStored}</p>
                 </div>
                 <div class="input-checkbox">
                     <input id="cb2" type="checkbox" />
-                    <label for="cb2">Accept our business terms and conditions</label>
+                    <label for="cb2">{acceptTermsConditions}</label>
                 </div>
-                <button id="submit-button" disabled="true">Save</button>
+                <button id="submit-button" disabled="true">{save}</button>
             </div>
         </div>
     </script>
@@ -144,6 +140,13 @@
         }
 
         document.write(document.getElementById('tmpl').innerHTML.template(translatedStrings));
+
+        const brandColor = urlParams.brandColor;
+
+        if (typeof brandColor === 'string' && brandColor !== '')
+        {
+            document.body.style.setProperty('--brand-color', brandColor);
+        }
 
         const submitButton = document.getElementById('submit-button');
         const checkbox1 = document.getElementById('cb1');
@@ -219,13 +222,6 @@
         });
 
         submitButton.addEventListener('click', submitForm());
-
-        const brandColor = urlParams.brandColor;
-
-        if (typeof brandColor === 'string' && brandColor !== '')
-        {
-            document.body.style.setProperty('--brand-color', brandColor);
-        }
     </script>
 </body>
 </html>
