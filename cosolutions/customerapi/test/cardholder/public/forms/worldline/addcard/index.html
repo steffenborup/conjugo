@@ -157,7 +157,7 @@
 
         if (typeof brandColor === 'string' && brandColor !== '')
         {
-            document.body.style.setProperty('--brand-color', brandColor);
+            document.body.style.setProperty('--brand-color', `#${brandColor}`);
         }
 
         const hostedTokenizationUrl = urlParams.url; //'https://payment.preprod.direct.worldline-solutions.com/hostedtokenization/tokenization/form/bbccadc5096e4cf7a3d4c212ebe90e0b';
