@@ -23,6 +23,10 @@
             width: 100%;
         }
 
+        #form {
+            visibility: hidden;
+        }
+
         #form-actions {
             padding: 1.25rem;
         }
@@ -98,7 +102,8 @@
                 return o;
             });
         };
-
+    </script>
+    <script>
         const strings = {
             da: {
                 rememberPaymentDetails: 'Husk mine betalingsoplysninger',
@@ -167,6 +172,9 @@
 
         //alert('DEBUG');
         //debugger;
+
+        console.log('form');
+        console.log('div-hosted-tokenization');
 
         const tokenizer = new Tokenizer(hostedTokenizationUrl, 'div-hosted-tokenization', options);
 
