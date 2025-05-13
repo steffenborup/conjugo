@@ -146,6 +146,7 @@
         // Apply template
         document.write(document.getElementById('tmpl').innerHTML.template(translatedStrings));
 
+        // Get url parameters
         const urlParams = new Proxy(new URLSearchParams(window.location.search), {
             get: (searchParams, prop) => searchParams.get(prop),
         });
@@ -206,7 +207,7 @@
             let e = {
                 //storePermanently: true // Store 
             };
-            
+
             tokenizer.submitTokenization(e).then(
                 (result) => {
                     console.log('SUCCESS');
