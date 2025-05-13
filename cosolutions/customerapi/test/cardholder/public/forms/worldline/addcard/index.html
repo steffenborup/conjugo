@@ -104,6 +104,7 @@
         };
     </script>
     <script>
+        // Set strings
         const strings = {
             da: {
                 rememberPaymentDetails: 'Husk mine betalingsoplysninger',
@@ -144,22 +145,20 @@
             console.log('Error when translating.');
         }
 
+        // Apply template
         document.write(document.getElementById('tmpl').innerHTML.template(translatedStrings));
 
+        const urlParams = new Proxy(new URLSearchParams(window.location.search), {
+            get: (searchParams, prop) => searchParams.get(prop),
+        });
+
+        // Set brand color
         const brandColor = urlParams.brandColor;
 
         if (typeof brandColor === 'string' && brandColor !== '')
         {
             document.body.style.setProperty('--brand-color', brandColor);
         }
-
-        const submitButton = document.getElementById('submit-button');
-        const checkbox1 = document.getElementById('cb1');
-        const checkbox2 = document.getElementById('cb2');
-
-        const urlParams = new Proxy(new URLSearchParams(window.location.search), {
-            get: (searchParams, prop) => searchParams.get(prop),
-        });
 
         const hostedTokenizationUrl = urlParams.url; //'https://payment.preprod.direct.worldline-solutions.com/hostedtokenization/tokenization/form/bbccadc5096e4cf7a3d4c212ebe90e0b';
         // to tokenise credit card data. Load it to the form into an existing DOM element on your check-out page
@@ -173,9 +172,7 @@
         //alert('DEBUG');
         //debugger;
 
-        console.log('form');
-        console.log('div-hosted-tokenization');
-
+        // Initialize form
         const tokenizer = new Tokenizer(hostedTokenizationUrl, 'div-hosted-tokenization', options);
 
         tokenizer.initialize()
@@ -195,7 +192,12 @@
             })
             .catch(reason => {
                 // Handle iFrame load error
-            })
+            });
+
+        // Event handlers
+        const submitButton = document.getElementById('submit-button');
+        const checkbox1 = document.getElementById('cb1');
+        const checkbox2 = document.getElementById('cb2');
 
         function updateSubmitButton() {
             // debugger;
