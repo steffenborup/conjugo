@@ -25,7 +25,7 @@
             visibility: hidden;
         }
 
-        #form-actions {
+        /* #form-actions {
             padding: 0 1.25rem 1.25rem;
         }
 
@@ -49,9 +49,9 @@
         .input-checkbox p {
             font-size: 85%;
             line-height: 1.2;
-        }
+        } */
 
-        #submit-button {
+        #submit {
             display: block;
             width: 100%;
             background-color: var(--brand-color);
@@ -61,10 +61,10 @@
             border: none;
             border-radius: 1.5rem;
             height: 3rem;
-            margin: 2rem 0 0;
+            margin: 2rem 1.25rem 1.25rem;
         }
 
-        #submit-button:disabled {
+        #submit:disabled {
             background-color: #ccc !important;
         }
     </style>
@@ -74,7 +74,7 @@
         <div id="form">
             <div id="div-hosted-tokenization"></div>
             <div id="form-actions">
-                <div class="input-checkbox">
+                <!-- <div class="input-checkbox">
                     <input id="cb1" type="checkbox" />
                     <label for="cb1">{rememberPaymentDetails}</label>
                     <p>{whatDetailsAreStored}</p>
@@ -83,8 +83,8 @@
                 <div class="input-checkbox">
                     <input id="cb2" type="checkbox" />
                     <label for="cb2">{acceptTermsConditions}</label>
-                </div>
-                <button id="submit-button" disabled="true">{save}</button>
+                </div> -->
+                <button id="submit" disabled="true">{save}</button>
             </div>
         </div>
     </script>
@@ -168,9 +168,6 @@
             //,threeDSecureOptions: {}
         };
 
-        //alert('DEBUG');
-        //debugger;
-
         // Initialize form
         const tokenizer = new Tokenizer(hostedTokenizationUrl, 'div-hosted-tokenization', options);
 
@@ -194,20 +191,11 @@
             });
 
         // Event handlers
-        const submitButton = document.getElementById('submit-button');
-        const checkbox1 = document.getElementById('cb1');
-        const checkbox2 = document.getElementById('cb2');
-
-        function updateSubmitButton() {
-            // debugger;
-            submitButton.disabled = !(checkbox1.checked && checkbox2.checked);
-        }
-
         function submitForm() { //
             let e = {
                 //storePermanently: true // Store 
             };
-
+            
             tokenizer.submitTokenization(e).then(
                 (result) => {
                     console.log('SUCCESS');
@@ -225,12 +213,21 @@
                 }
             );
         }
-
-        document.querySelectorAll('#form-actions input[type="checkbox"]').forEach((x) => {
-            x.addEventListener('change', updateSubmitButton);
-        });
+            
+        const submitButton = document.getElementById('submit');
+        // const checkbox1 = document.getElementById('cb1');
+        // const checkbox2 = document.getElementById('cb2');
 
         submitButton.addEventListener('click', submitForm);
+
+        // function updateSubmitButton() {
+        //     submitButton.disabled = !(checkbox1.checked && checkbox2.checked);
+        // }
+            
+        // document.querySelectorAll('#form-actions input[type="checkbox"]').forEach((x) => {
+        //     x.addEventListener('change', updateSubmitButton);
+        // });
+
     </script>
 </body>
 </html>
