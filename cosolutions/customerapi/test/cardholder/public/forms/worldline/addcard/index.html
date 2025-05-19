@@ -29,7 +29,6 @@
             padding: 1.25rem;
         }
 
-        /*
         .input-checkbox {
             position: relative;
             display: block;
@@ -51,11 +50,12 @@
             font-size: 85%;
             line-height: 1.2;
         }
-        */
 
         #submit {
             display: block;
             width: 100%;
+            max-width: 500px;
+            margin: auto;
             background-color: var(--brand-color);
             font-size: 1rem;
             font-weight: bold;
@@ -80,11 +80,11 @@
                     <label for="cb1">{rememberPaymentDetails}</label>
                     <p>{whatDetailsAreStored}</p>
                     <p>{whereAreDetailsStored}</p>
-                </div>
-                <div class="input-checkbox">
-                    <input id="cb2" type="checkbox" />
-                    <label for="cb2">{acceptTermsConditions}</label>
                 </div> -->
+                <div class="input-checkbox">
+                    <input id="terms-conditions" type="checkbox" />
+                    <label for="terms-conditions">{acceptTermsConditions}</label>
+                </div>
                 <button id="submit">{save}</button>
             </div>
         </div>
@@ -109,21 +109,21 @@
                 rememberPaymentDetails: 'Husk mine betalingsoplysninger',
                 whatDetailsAreStored: '<strong>Hvilke oplysninger gemmes?</strong> For at gøre betaling nemmere, gemmer vi alle indtastede informationer undtagen CVC-koden. Dette bidrager til at holde dine betalinger sikre.',
                 whereAreDetailsStored: '<strong>Hvor gemmes mine oplysninger?</strong> Dine betalingsoplysninger gemmes sikkert på din konto. Du kan vælge at opdatere eller slette disse oplysninger ved at kontakte forhandleren.',
-                acceptTermsConditions: 'Acceptér vores forretningsbetingelser',
+                acceptTermsConditions: 'Jeg har læst og accepterer <a href="https://www.codatahost.com/doc/privacy/" target="_blank">forretningsbetingelserne</a>',
                 save: 'Gem'
             },
             en: {
                 rememberPaymentDetails: 'Remember my payment details',
                 whatDetailsAreStored: '<strong>What details are being stored?</strong> To make payment easier, we store all details except the security code. This helps to keep your payment secure.',
                 whereAreDetailsStored: '<strong>Where are my details stored?</strong> Your payment details are securely stored with your account. You can choose to update or delete these details by contacting the merchant.',
-                acceptTermsConditions: 'Accept our business terms and conditions',
+                acceptTermsConditions: 'I have read and accept the business terms and conditions',
                 save: 'Save'
             },
             nb: {
                 rememberPaymentDetails: 'Remember my payment details',
                 whatDetailsAreStored: '<strong>Hvilken informasjon lagres?</strong> For å gjøre betalingen enklere lagrer vi all oppgitt informasjon unntatt CVC-koden. Dette bidrar til å holde betalingene dine sikre.',
                 whereAreDetailsStored: '<strong>Hvor lagres informasjonen min?</strong> Betalingsinformasjonen din lagres sikkert på kontoen din. Du kan velge å oppdatere eller slette denne informasjonen ved å kontakte forhandleren.',
-                acceptTermsConditions: 'Godta våre forretningsvilkår',
+                acceptTermsConditions: 'Jeg har lest og godtar forretningsvilkårene',
                 save: 'Lagre'
             }
         };
@@ -165,7 +165,7 @@
 
         let options = {
             hideCardholderName: false,
-            locale: "dk_DK"
+            locale: "da-DK"
             //,threeDSecureOptions: {}
         };
 
@@ -217,7 +217,7 @@
             
         const submitButton = document.getElementById('submit');
         // const checkbox1 = document.getElementById('cb1');
-        // const checkbox2 = document.getElementById('cb2');
+        const termsConditions = document.getElementById('terms-conditions');
 
         submitButton.addEventListener('click', submitForm);
 
