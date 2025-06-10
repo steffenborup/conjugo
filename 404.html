@@ -7,5 +7,27 @@
     </head>
     <body>
         <h1>404 File not found</h1>
+        <script>
+            (() => {
+                const path = window.location.pathname.split('/').filter(x => x != '');
+
+                if (path.length < 3 || path.length > 4)
+                {
+                    return;
+                }
+
+                if (path[0] === 'cosolutions' && path[1] === 'cardholder' && path[2] === 'android')
+                {
+                    let destination = 'https://cosolutions-cardholder.web.app/';
+
+                    if (path[3] !== undefined)
+                    {
+                        destination += `${path[3]}/`;
+                    }
+
+                    window.location = destination;
+                }
+            })();
+        </script>
     </body>
 </html>
