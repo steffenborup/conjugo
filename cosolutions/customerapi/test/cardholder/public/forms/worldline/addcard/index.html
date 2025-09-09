@@ -260,7 +260,7 @@
 
         document.getElementById('terms-link').addEventListener('click', (e) => {
             e.preventDefault();
-            window.location = 'external-browser:{termsUrl}';
+            window.location = `external-browser:${e.target.href}`;
         });
     </script>
 </body>
