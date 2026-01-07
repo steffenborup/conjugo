@@ -175,12 +175,11 @@
         }
 
         const hostedTokenizationUrl = urlParams.url;
-        // to tokenise credit card data. Load it to the form into an existing DOM element on your check-out page
+        // For tokenizing credit card data. Load it to the form into an existing DOM element on your check-out page
 
         let options = {
             hideCardholderName: false,
             locale: "da-DK"
-            //,threeDSecureOptions: {}
         };
 
         // Initialize form
@@ -199,9 +198,7 @@
 
         // Event handlers
         function submitForm() { //
-            let e = {
-                //storePermanently: true // Store 
-            };
+            let e = {};
             
             tokenizer.submitTokenization(e).then(
                 (result) => {
