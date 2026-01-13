@@ -55,6 +55,12 @@
             "Position": {
                 "Lat": 56.1536813,
                 "Lng": 10.1802903
+            },
+            "Usage": {
+                "MobileFueling": true,
+                "MobileMap": true,
+                "MobileAllowBankCard": true,
+                "WebMap": true
             }
         },
         {
@@ -80,6 +86,12 @@
             "Position": {
                 "Lat": 56.1334169,
                 "Lng": 10.157633
+            },
+            "Usage": {
+                "MobileFueling": true,
+                "MobileMap": true,
+                "MobileAllowBankCard": true,
+                "WebMap": true
             }
         },
         {
@@ -106,6 +118,12 @@
             "Position": {
                 "Lat": 56.1324869,
                 "Lng": 10.1679291
+            },
+            "Usage": {
+                "MobileFueling": true,
+                "MobileMap": true,
+                "MobileAllowBankCard": true,
+                "WebMap": true
             }
         },
         {
@@ -135,6 +153,12 @@
             "Position": {
                 "Lat": 56.067721,
                 "Lng": 10.1624833
+            },
+            "Usage": {
+                "MobileFueling": true,
+                "MobileMap": true,
+                "MobileAllowBankCard": true,
+                "WebMap": true
             }
         },
         {
@@ -163,6 +187,12 @@
             "Position": {
                 "Lat": 56.12690919999999,
                 "Lng": 10.1851822
+            },
+            "Usage": {
+                "MobileFueling": true,
+                "MobileMap": true,
+                "MobileAllowBankCard": true,
+                "WebMap": true
             }
         },
         {
@@ -188,6 +218,12 @@
             "Position": {
                 "Lat": 56.1504249,
                 "Lng": 10.1667798
+            },
+            "Usage": {
+                "MobileFueling": true,
+                "MobileMap": true,
+                "MobileAllowBankCard": true,
+                "WebMap": true
             }
         },
         {
@@ -215,6 +251,12 @@
             "Position": {
                 "Lat": 56.058963,
                 "Lng": 10.204804
+            },
+            "Usage": {
+                "MobileFueling": true,
+                "MobileMap": true,
+                "MobileAllowBankCard": true,
+                "WebMap": true
             }
         },
         {
@@ -240,6 +282,12 @@
             "Position": {
                 "Lat": 56.11394139999999,
                 "Lng": 10.1521324
+            },
+            "Usage": {
+                "MobileFueling": true,
+                "MobileMap": true,
+                "MobileAllowBankCard": true,
+                "WebMap": true
             }
         },
         {
@@ -266,6 +314,12 @@
             "Position": {
                 "Lat": 56.1303174,
                 "Lng": 10.1589417
+            },
+            "Usage": {
+                "MobileFueling": true,
+                "MobileMap": true,
+                "MobileAllowBankCard": true,
+                "WebMap": true
             }
         },
         {
@@ -295,6 +349,12 @@
             "Position": {
                 "Lat": 56.1173971,
                 "Lng": 10.1507791
+            },
+            "Usage": {
+                "MobileFueling": true,
+                "MobileMap": true,
+                "MobileAllowBankCard": true,
+                "WebMap": true
             }
         },
         {
@@ -322,6 +382,12 @@
             "Position": {
                 "Lat": 56.10383359999999,
                 "Lng": 10.1449978
+            },
+            "Usage": {
+                "MobileFueling": true,
+                "MobileMap": true,
+                "MobileAllowBankCard": true,
+                "WebMap": true
             }
         },
         {
@@ -348,6 +414,12 @@
             "Position": {
                 "Lat": 56.10726349999999,
                 "Lng": 10.2053396
+            },
+            "Usage": {
+                "MobileFueling": true,
+                "MobileMap": true,
+                "MobileAllowBankCard": true,
+                "WebMap": true
             }
         },
         {
@@ -375,6 +447,12 @@
             "Position": {
                 "Lat": 56.10392849999999,
                 "Lng": 10.2063975
+            },
+            "Usage": {
+                "MobileFueling": true,
+                "MobileMap": true,
+                "MobileAllowBankCard": true,
+                "WebMap": true
             }
         },
         {
@@ -401,6 +479,12 @@
             "Position": {
                 "Lat": 56.1078442,
                 "Lng": 10.1344246
+            },
+            "Usage": {
+                "MobileFueling": true,
+                "MobileMap": true,
+                "MobileAllowBankCard": true,
+                "WebMap": true
             }
         },
         {
@@ -427,6 +511,12 @@
             "Position": {
                 "Lat": 56.1073817,
                 "Lng": 10.2071417
+            },
+            "Usage": {
+                "MobileFueling": true,
+                "MobileMap": true,
+                "MobileAllowBankCard": true,
+                "WebMap": true
             }
         },
         {
@@ -453,6 +543,12 @@
             "Position": {
                 "Lat": 56.1171405,
                 "Lng": 10.1985861
+            },
+            "Usage": {
+                "MobileFueling": true,
+                "MobileMap": true,
+                "MobileAllowBankCard": true,
+                "WebMap": true
             }
         },
         {
@@ -479,6 +575,12 @@
             "Position": {
                 "Lat": 57.395936638739535,
                 "Lng": 9.98468531420203
+            },
+            "Usage": {
+                "MobileFueling": true,
+                "MobileMap": true,
+                "MobileAllowBankCard": true,
+                "WebMap": true
             }
         },
         {
@@ -505,6 +607,12 @@
             "Position": {
                 "Lat": 55.106365693163,
                 "Lng": 12.028547588143137
+            },
+            "Usage": {
+                "MobileFueling": true,
+                "MobileMap": true,
+                "MobileAllowBankCard": true,
+                "WebMap": true
             }
         },
         {
@@ -531,6 +639,12 @@
             "Position": {
                 "Lat": 55.11550071481371,
                 "Lng": 12.039262359816872
+            },
+            "Usage": {
+                "MobileFueling": true,
+                "MobileMap": true,
+                "MobileAllowBankCard": true,
+                "WebMap": true
             }
         },
         {
@@ -557,6 +671,12 @@
             "Position": {
                 "Lat": 55.1173403591996,
                 "Lng": 12.03380249782203
+            },
+            "Usage": {
+                "MobileFueling": true,
+                "MobileMap": true,
+                "MobileAllowBankCard": true,
+                "WebMap": true
             }
         },
         {
@@ -583,6 +703,12 @@
             "Position": {
                 "Lat": 55.12130803303376,
                 "Lng": 11.96900910746192
+            },
+            "Usage": {
+                "MobileFueling": true,
+                "MobileMap": true,
+                "MobileAllowBankCard": true,
+                "WebMap": true
             }
         },
         {
@@ -610,6 +736,12 @@
             "Position": {
                 "Lat": 56.0671873,
                 "Lng": 9.9815894
+            },
+            "Usage": {
+                "MobileFueling": true,
+                "MobileMap": true,
+                "MobileAllowBankCard": false,
+                "WebMap": true
             }
         },
         {
@@ -639,6 +771,12 @@
             "Position": {
                 "Lat": 56.212254,
                 "Lng": 10.048151
+            },
+            "Usage": {
+                "MobileFueling": true,
+                "MobileMap": true,
+                "MobileAllowBankCard": true,
+                "WebMap": true
             }
         }
     ],
