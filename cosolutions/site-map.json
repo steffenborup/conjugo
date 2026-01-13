@@ -603,7 +603,8 @@
                 "MAP LOCAL CARDS",
                 "MAP RME100",
                 "MAP B7",
-                "MAP HGV"
+                "MAP HGV",
+                "MAP BANKCARD DENY"
             ],
             "MarkerColor": "FF0000",
             "Position": {
@@ -746,7 +747,14 @@
             "Description": "Truck",
             "IconUrl": "https://assets.codatahost.com/apps/customerapp/v2/map-icons/truck-0256.svg",
             "Type": "VEHICLE"
-        }
+        },
+        {
+            "CompanyNo": 475,
+            "TagName": "MAP BANKCARD DENY",
+            "IconUrl": "https://assets.codatahost.com/icons/sitemap-icons/question-circle-regular.svg",
+            "Description": "Betalingskort modtages ikke",
+            "Type": null
+        }        
     ],
     "AllowDownload": true,
     "Grouping": [
@@ -781,7 +789,8 @@
             "GroupName": "Other",
             "Catchall": true,
             "Tags": [
-                "MAP SHOP"
+                "MAP SHOP",
+                "MAP BANKCARD DENY"
             ]
         }
     ]
