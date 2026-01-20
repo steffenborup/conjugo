@@ -1,0 +1,243 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <style>
+        body {
+            --brand-color: #000;
+            margin: 0;
+            padding: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: .9375rem;
+            line-height: 1.2em;
+        }
+
+        a {
+            color: var(--brand-color);
+            text-decoration: underline;
+        }
+
+        #div-hosted-tokenization iframe {
+            position: relative;
+            display: block;
+            border: none;
+            width: 100%;
+        }
+
+        #form {
+            visibility: hidden;
+        }
+
+        .form-control {
+            padding: 1.25rem;
+            max-width: 500px;
+            margin: auto;
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        input[type="checkbox"] {
+            appearance: none;
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: .25rem;
+            display: grid;
+            place-content: center;
+            border: .125rem solid #888;
+            flex-shrink: 0;
+        }
+
+        input[type="checkbox"]:checked {
+            border-color: var(--brand-color);
+            background-color: var(--brand-color);
+        }
+
+        input[type="checkbox"]:checked::before {
+            content: '';
+            width: 1rem;
+            height: 1rem;
+            background-color: #fff;
+            clip-path: polygon(10% 35%, 0 45%, 40% 85%, 100% 25%, 90% 15%, 40% 65%);
+        }
+
+        #submit {
+            display: block;
+            width: 100%;
+            background-color: var(--brand-color);
+            font-size: 1rem;
+            font-weight: bold;
+            color: #fff;
+            border: none;
+            border-radius: 1.5rem;
+            height: 3rem;
+        }
+
+        #submit:disabled {
+            background-color: #ccc !important;
+        }
+    </style>
+</head>
+<body>
+    <script type="text/html" id="tmpl">        
+        <div id="form">
+            <div id="div-hosted-tokenization"></div>
+            <div class="form-control">
+                <input id="terms" type="checkbox" />
+                <label for="terms">{acceptTermsConditions}</label>
+            </div>
+            <div class="form-control">
+                <button id="submit" disabled>{save}</button>
+            </div>
+        </div>
+    </script>
+    <script>
+        String.prototype.template = function (d) {
+            return this.replace(/\{([^\}]+)\}/g, function (m, n) {
+                var o = d, p = n.split('|')[0].split('.');
+                for (var i = 0; i < p.length; i++) {
+                    o = typeof o[p[i]] === "function" ? o[p[i]]() : o[p[i]];
+                    if (typeof o === "undefined" || o === null) return n.indexOf('|') !== -1 ? n.split('|')[1] : m;
+                }
+                return o;
+            });
+        };
+    </script>
+    <script>
+        // Set strings
+        const strings = {
+            da: {
+                acceptTermsConditions: 'Jeg har læst og accepterer hermed <a id="terms-link" href="{termsUrl}">forretningsbetingelserne</a>',
+                save: 'Gem'
+            },
+            en: {
+                acceptTermsConditions: 'I have read and hereby accept the <a id="terms-link" href="{termsUrl}">business terms and conditions</a>',
+                save: 'Save'
+            },
+            nb: {
+                acceptTermsConditions: 'Jeg har lest og godtar herved <a id="terms-link" href="{termsUrl}">forretningsvilkårene</a>',
+                save: 'Lagre'
+            },
+            sv: {
+                acceptTermsConditions: 'Jag har läst och accepterar härmed <a id="terms-link" href="{termsUrl}">affärsvillkoren</a>',
+                save: 'Spara'
+            }
+        };
+
+        let translatedStrings = strings['en'];
+
+        try
+        {
+            const language = navigator.language.substring(0, 2);
+            
+            if (strings[language] !== undefined)
+            {
+                translatedStrings = strings[language];
+            }
+        }
+        catch (e)
+        {
+            // Translation failed
+        }
+
+        // Get url parameters
+        const urlParams = new Proxy(new URLSearchParams(window.location.search), {
+            get: (searchParams, prop) => searchParams.get(prop),
+        });
+
+        // Get template
+        let content = document.getElementById('tmpl').innerHTML;
+        
+        // Translate strings
+        content = content.template(translatedStrings);
+
+        // Replace variables
+        content = content.template({
+            termsUrl: urlParams.termsUrl
+        });
+
+        // Write content
+        document.write(content);
+
+        // Set brand color
+        const brandColor = urlParams.brandColor;
+
+        if (typeof brandColor === 'string' && brandColor !== '')
+        {
+            document.body.style.setProperty('--brand-color', `#${brandColor}`);
+        }
+
+        // Add event handlers
+        const submitElm = document.getElementById('submit');
+        
+        const checkboxesElm = document.querySelectorAll('input[type="checkbox"]');
+        checkboxesElm.forEach((x) => {
+            x.addEventListener('change', () => {
+                for (let i = 0; i < checkboxesElm.length; i++)
+                {
+                    if (!checkboxesElm[i].checked)
+                    {
+                        submitElm.disabled = true;
+                        return;
+                    }
+                }
+                submitElm.disabled = false;
+            });
+        });
+        
+        const termsLinkElm = document.getElementById('terms-link');
+        termsLinkElm.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.location = `external-browser:${e.target.href}`;
+        });
+        
+        // For tokenizing credit card data. Load it to the form into an existing DOM element on your check-out page
+        const hostedTokenizationUrl = URL.parse(urlParams.url);
+
+        // Load Tokenizer library and initialize form
+        const scriptElm = document.createElement('script');
+
+        scriptElm.src = `${hostedTokenizationUrl.origin}/hostedtokenization/js/client/tokenizer.min.js`;
+
+        scriptElm.addEventListener('load', e => {
+
+            // Define options
+            // https://docs.direct.worldline-solutions.com/en/integration/basic-integration-methods/hosted-tokenization-page#hosted_tokenization_page_use_advanced_customisation_tools_1
+            let options = {
+                hideCardholderName: false,
+                locale: navigator.language.replace('-', '_')
+            };
+            
+            // Initialize form
+            const tokenizer = new Tokenizer(hostedTokenizationUrl.href, 'div-hosted-tokenization', options);
+
+            tokenizer.initialize()
+                .then(() => {
+                    setTimeout(() => {
+                        // Make the form visible in 50ms to avoid layout flicking while it is being generated.
+                        document.getElementById('form').style.visibility = 'visible';
+                    }, 50);
+                })
+                .catch(reason => {
+                    // Handle iframe load error
+                });
+
+            // Handle submit
+            submitElm.addEventListener('click', e => {
+                tokenizer.submitTokenization({}).then(
+                    (result) => {
+                        if (result.success) {
+                            window.location.href = urlParams.returnurl || 'about:blank';
+                        }
+                    },
+                    (error) => {
+                    }
+                );
+            });
+        });
+
+        document.body.appendChild(scriptElm);
+    </script>
+</body>
+</html>
