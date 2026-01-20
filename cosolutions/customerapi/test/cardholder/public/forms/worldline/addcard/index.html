@@ -92,7 +92,6 @@
             </div>
         </div>
     </script>
-    <script src="https://payment.preprod.direct.worldline-solutions.com/hostedtokenization/js/client/tokenizer.min.js"></script>
     <script>
         String.prototype.template = function (d) {
             return this.replace(/\{([^\}]+)\}/g, function (m, n) {
@@ -109,25 +108,20 @@
         // Set strings
         const strings = {
             da: {
-                rememberPaymentDetails: 'Husk mine betalingsoplysninger',
-                whatDetailsAreStored: '<strong>Hvilke oplysninger gemmes?</strong> For at gøre betaling nemmere, gemmer vi alle indtastede informationer undtagen CVC-koden. Dette bidrager til at holde dine betalinger sikre.',
-                whereAreDetailsStored: '<strong>Hvor gemmes mine oplysninger?</strong> Dine betalingsoplysninger gemmes sikkert på din konto. Du kan vælge at opdatere eller slette disse oplysninger ved at kontakte forhandleren.',
                 acceptTermsConditions: 'Jeg har læst og accepterer hermed <a id="terms-link" href="{termsUrl}">forretningsbetingelserne</a>',
                 save: 'Gem'
             },
             en: {
-                rememberPaymentDetails: 'Remember my payment details',
-                whatDetailsAreStored: '<strong>What details are being stored?</strong> To make payment easier, we store all details except the security code. This helps to keep your payment secure.',
-                whereAreDetailsStored: '<strong>Where are my details stored?</strong> Your payment details are securely stored with your account. You can choose to update or delete these details by contacting the merchant.',
                 acceptTermsConditions: 'I have read and hereby accept the <a id="terms-link" href="{termsUrl}">business terms and conditions</a>',
                 save: 'Save'
             },
             nb: {
-                rememberPaymentDetails: 'Remember my payment details',
-                whatDetailsAreStored: '<strong>Hvilken informasjon lagres?</strong> For å gjøre betalingen enklere lagrer vi all oppgitt informasjon unntatt CVC-koden. Dette bidrar til å holde betalingene dine sikre.',
-                whereAreDetailsStored: '<strong>Hvor lagres informasjonen min?</strong> Betalingsinformasjonen din lagres sikkert på kontoen din. Du kan velge å oppdatere eller slette denne informasjonen ved å kontakte forhandleren.',
                 acceptTermsConditions: 'Jeg har lest og godtar herved <a id="terms-link" href="{termsUrl}">forretningsvilkårene</a>',
                 save: 'Lagre'
+            },
+            sv: {
+                acceptTermsConditions: 'Jag har läst och accepterar härmed <a id="terms-link" href="{termsUrl}">affärsvillkoren</a>',
+                save: 'Spara'
             }
         };
 
@@ -174,65 +168,74 @@
             document.body.style.setProperty('--brand-color', `#${brandColor}`);
         }
 
-        // For tokenizing credit card data. Load it to the form into an existing DOM element on your check-out page
-        const hostedTokenizationUrl = urlParams.url;
-
-        let options = {
-            hideCardholderName: false,
-            locale: "da-DK"
-        };
-
-        // Initialize form
-        const tokenizer = new Tokenizer(hostedTokenizationUrl, 'div-hosted-tokenization', options);
-
-        tokenizer.initialize()
-            .then(() => {
-                setTimeout(() => {
-                    // Make the form visible in 50ms to avoid layout flicking while it is being generated.
-                    document.getElementById('form').style.visibility = 'visible';
-                }, 50);
-            })
-            .catch(reason => {
-                // Handle iframe load error
-            });
-
         // Event handlers
-        function submitForm() { //
-            let e = {};
-            
-            tokenizer.submitTokenization(e).then(
-                (result) => {
-                    if (result.success) {
-                        window.location.href = urlParams.returnurl || 'about:blank';
-                    }
-                },
-                (error) => {
-                }
-            );
-        }
-            
-        const submit = document.getElementById('submit');
-        submit.addEventListener('click', submitForm);
-
-        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-        checkboxes.forEach((x) => {
+        const submitElm = document.getElementById('submit');
+        
+        const checkboxesElm = document.querySelectorAll('input[type="checkbox"]');
+        checkboxesElm.forEach((x) => {
             x.addEventListener('change', () => {
-                for (let i = 0; i < checkboxes.length; i++)
+                for (let i = 0; i < checkboxesElm.length; i++)
                 {
-                    if (!checkboxes[i].checked)
+                    if (!checkboxesElm[i].checked)
                     {
-                        submit.disabled = true;
+                        submitElm.disabled = true;
                         return;
                     }
                 }
-                submit.disabled = false;
+                submitElm.disabled = false;
             });
         });
-
-        document.getElementById('terms-link').addEventListener('click', (e) => {
+        
+        const termsLinkElm = document.getElementById('terms-link');
+        termsLinkElm.addEventListener('click', (e) => {
             e.preventDefault();
             window.location = `external-browser:${e.target.href}`;
         });
+        
+        // For tokenizing credit card data. Load it to the form into an existing DOM element on your check-out page
+        const hostedTokenizationUrl = URL.parse(urlParams.url);
+
+        // Load Tokenizer library and initialize form
+        const scriptElm = document.createElement('script');
+
+        scriptElm.src = `${hostedTokenizationUrl.origin}/hostedtokenization/js/client/tokenizer.min.js`;
+
+        scriptElm.addEventListener('load', e => {
+
+            // Initialize form
+            let options = {
+                hideCardholderName: false,
+                locale: navigator.language.replace('-', '_')
+            };
+
+            const tokenizer = new Tokenizer(hostedTokenizationUrl.href, 'div-hosted-tokenization', options);
+
+            tokenizer.initialize()
+                .then(() => {
+                    setTimeout(() => {
+                        // Make the form visible in 50ms to avoid layout flicking while it is being generated.
+                        document.getElementById('form').style.visibility = 'visible';
+                    }, 50);
+                })
+                .catch(reason => {
+                    // Handle iframe load error
+                });
+
+            // Handle submit
+            submitElm.addEventListener('click', e => {
+                tokenizer.submitTokenization({}).then(
+                    (result) => {
+                        if (result.success) {
+                            window.location.href = urlParams.returnurl || 'about:blank';
+                        }
+                    },
+                    (error) => {
+                    }
+                );
+            });
+        });
+
+        document.body.appendChild(scriptElm);
     </script>
 </body>
 </html>
