@@ -1,0 +1,935 @@
+{
+    "Title": "Hello World",
+    "Heading": "All Stations",
+    "HideNav": true,
+    "Center": {
+        "Lat": 56.1086829,
+        "Lng": 10.1915394
+    },
+    "Country": "Germany",
+    "Zoom": 8,
+    "Height": "600px",
+    "Legend": [
+        {
+            "Name": "Jetzt Energy",
+            "MarkerColor": "0000FF"
+        }
+    ],
+    "InfoWindow": {
+        "Columns": [
+            {
+                "Groups": [
+                    "Vehicles",
+                    "Payment"
+                ]
+            },
+            {
+                "Groups": [
+                    "Fuel",
+                    "Other"
+                ]
+            }
+        ]
+    },
+    "Sites": [
+        {
+            "SiteNo": 2,
+            "SiteID": "TEST/DK/Site0016",
+            "CompanyNo": 475,
+            "Name": "Åbyhøj",
+            "Address": {
+                "AddressLine1": "Søren Frichs Vej 32",
+                "City": "Åbyhøj",
+                "CountryCode": "DK",
+                "PostalCode": "8230"
+            },
+            "Tags": [
+                "MAP CAR",
+                "MAP LOCAL CARDS",
+                "MAP MASTERCARD",
+                "MAP VISA",
+                "MAP 95 BF",
+                "MAP B7"
+            ],
+            "MarkerColor": "0000FF",
+            "Position": {
+                "Lat": 56.1536813,
+                "Lng": 10.1802903
+            },
+            "Usage": {
+                "MobileFueling": true,
+                "MobileMap": true,
+                "MobileBankCard": true,
+                "WebMap": true
+            }
+        },
+        {
+            "SiteNo": 3,
+            "SiteID": "TEST/DK/Site0016",
+            "CompanyNo": 475,
+            "Name": "Åhave",
+            "Address": {
+                "AddressLine1": "Åhave Parkvej 11",
+                "City": "Viby J",
+                "CountryCode": "DK",
+                "PostalCode": "8260"
+            },
+            "Tags": [
+                "MAP CAR",
+                "MAP LOCAL CARDS",
+                "MAP MASTERCARD",
+                "MAP VISA",
+                "MAP 95 BF",
+                "MAP B7"
+            ],
+            "MarkerColor": "0000FF",
+            "Position": {
+                "Lat": 56.1334169,
+                "Lng": 10.157633
+            },
+            "Usage": {
+                "MobileFueling": true,
+                "MobileMap": true,
+                "MobileBankCard": true,
+                "WebMap": true
+            }
+        },
+        {
+            "SiteNo": 4,
+            "SiteID": "TEST/DK/Site0016",
+            "CompanyNo": 475,
+            "Name": "Viby J",
+            "Address": {
+                "AddressLine1": "Skanderborgvej 158",
+                "City": "Viby J",
+                "CountryCode": "DK",
+                "PostalCode": "8260"
+            },
+            "Tags": [
+                "MAP ADBLUE",
+                "MAP CAR",
+                "MAP LOCAL CARDS",
+                "MAP MASTERCARD",
+                "MAP VISA",
+                "MAP 95 BF",
+                "MAP B7"
+            ],
+            "MarkerColor": "0000FF",
+            "Position": {
+                "Lat": 56.1324869,
+                "Lng": 10.1679291
+            },
+            "Usage": {
+                "MobileFueling": true,
+                "MobileMap": true,
+                "MobileBankCard": true,
+                "WebMap": true
+            }
+        },
+        {
+            "SiteNo": 5,
+            "SiteID": "TEST/DK/Site0016",
+            "CompanyNo": 475,
+            "Name": "Mårslet",
+            "Address": {
+                "AddressLine1": "Hørretvej 12",
+                "City": "Mårslet",
+                "CountryCode": "DK",
+                "PostalCode": "8320"
+            },
+            "Tags": [
+                "MAP ADBLUE",
+                "MAP CAR",
+                "MAP HVO",
+                "MAP LOCAL CARDS",
+                "MAP MASTERCARD",
+                "MAP VISA",
+                "MAP 95 BF",
+                "MAP RME100",
+                "MAP B7",
+                "MAP HGV"
+            ],
+            "MarkerColor": "0000FF",
+            "Position": {
+                "Lat": 56.067721,
+                "Lng": 10.1624833
+            },
+            "Usage": {
+                "MobileFueling": true,
+                "MobileMap": true,
+                "MobileBankCard": true,
+                "WebMap": true
+            }
+        },
+        {
+            "SiteNo": 6,
+            "SiteID": "TEST/DK/Site0016",
+            "CompanyNo": 475,
+            "Name": "Fredensvang",
+            "Address": {
+                "AddressLine1": "Fredensvang Runddel 10",
+                "City": "Viby J",
+                "CountryCode": "DK",
+                "PostalCode": "8260"
+            },
+            "Tags": [
+                "MAP ADBLUE",
+                "MAP CAR",
+                "MAP HVO",
+                "MAP LOCAL CARDS",
+                "MAP MASTERCARD",
+                "MAP VISA",
+                "MAP RME100",
+                "MAP B7",
+                "MAP HGV"
+            ],
+            "MarkerColor": "0000FF",
+            "Position": {
+                "Lat": 56.12690919999999,
+                "Lng": 10.1851822
+            },
+            "Usage": {
+                "MobileFueling": true,
+                "MobileMap": true,
+                "MobileBankCard": true,
+                "WebMap": true
+            }
+        },
+        {
+            "SiteNo": 7,
+            "SiteID": "TEST/DK/Site0016",
+            "CompanyNo": 475,
+            "Name": "S. Frichs",
+            "Address": {
+                "AddressLine1": "Søren Frichs Vej 54",
+                "City": "Åbyhøj",
+                "CountryCode": "DK",
+                "PostalCode": "8230"
+            },
+            "Tags": [
+                "MAP ADBLUE",
+                "MAP CAR",
+                "MAP HVO",
+                "MAP LOCAL CARDS",
+                "MAP B7",
+                "MAP HGV"
+            ],
+            "MarkerColor": "0000FF",
+            "Position": {
+                "Lat": 56.1504249,
+                "Lng": 10.1667798
+            },
+            "Usage": {
+                "MobileFueling": true,
+                "MobileMap": true,
+                "MobileBankCard": true,
+                "WebMap": true
+            }
+        },
+        {
+            "SiteNo": 8,
+            "SiteID": "TEST/DK/Site0016",
+            "CompanyNo": 475,
+            "Name": "Beder",
+            "Address": {
+                "AddressLine1": "Kirkebakken 2",
+                "City": "Beder",
+                "CountryCode": "DK",
+                "PostalCode": "8330"
+            },
+            "Tags": [
+                "MAP CAR",
+                "MAP LOCAL CARDS",
+                "MAP MASTERCARD",
+                "MAP SHOP",
+                "MAP VISA",
+                "MAP 95 BF",
+                "MAP RME100",
+                "MAP B7"
+            ],
+            "MarkerColor": "0000FF",
+            "Position": {
+                "Lat": 56.058963,
+                "Lng": 10.204804
+            },
+            "Usage": {
+                "MobileFueling": true,
+                "MobileMap": true,
+                "MobileBankCard": true,
+                "WebMap": true
+            }
+        },
+        {
+            "SiteNo": 9,
+            "SiteID": "TEST/DK/Site0016",
+            "CompanyNo": 475,
+            "Name": "Rosenhøj",
+            "Address": {
+                "AddressLine1": "Rosenhøj 30",
+                "City": "Viby J",
+                "CountryCode": "DK",
+                "PostalCode": "8260"
+            },
+            "Tags": [
+                "MAP ADBLUE",
+                "MAP CAR",
+                "MAP HVO",
+                "MAP LOCAL CARDS",
+                "MAP B7",
+                "MAP HGV"
+            ],
+            "MarkerColor": "0000FF",
+            "Position": {
+                "Lat": 56.11394139999999,
+                "Lng": 10.1521324
+            },
+            "Usage": {
+                "MobileFueling": true,
+                "MobileMap": true,
+                "MobileBankCard": true,
+                "WebMap": true
+            }
+        },
+        {
+            "SiteNo": 10,
+            "SiteID": "TEST/DK/Site0016",
+            "CompanyNo": 475,
+            "Name": "Ormslevvej",
+            "Address": {
+                "AddressLine1": "Ormslevvej 61",
+                "City": "Viby J",
+                "CountryCode": "DK",
+                "PostalCode": "8260"
+            },
+            "Tags": [
+                "MAP CAR",
+                "MAP LOCAL CARDS",
+                "MAP MASTERCARD",
+                "MAP VISA",
+                "MAP 95 BF",
+                "MAP RME100",
+                "MAP B7"
+            ],
+            "MarkerColor": "0000FF",
+            "Position": {
+                "Lat": 56.1303174,
+                "Lng": 10.1589417
+            },
+            "Usage": {
+                "MobileFueling": true,
+                "MobileMap": true,
+                "MobileBankCard": true,
+                "WebMap": true
+            }
+        },
+        {
+            "SiteNo": 11,
+            "SiteID": "TEST/DK/Site0016",
+            "CompanyNo": 475,
+            "Name": "Viby Syd",
+            "Address": {
+                "AddressLine1": "Ringvej Syd 100",
+                "City": "Viby J",
+                "CountryCode": "DK",
+                "PostalCode": "8260"
+            },
+            "Tags": [
+                "MAP ADBLUE",
+                "MAP CAR",
+                "MAP HVO",
+                "MAP LOCAL CARDS",
+                "MAP MASTERCARD",
+                "MAP VISA",
+                "MAP 95 BF",
+                "MAP RME100",
+                "MAP B7",
+                "MAP HGV"
+            ],
+            "MarkerColor": "0000FF",
+            "Position": {
+                "Lat": 56.1173971,
+                "Lng": 10.1507791
+            },
+            "Usage": {
+                "MobileFueling": true,
+                "MobileMap": true,
+                "MobileBankCard": true,
+                "WebMap": true
+            }
+        },
+        {
+            "SiteNo": 12,
+            "SiteID": "TEST/DK/Site0016",
+            "CompanyNo": 475,
+            "Name": "Tranbjerg",
+            "Address": {
+                "AddressLine1": "Chr. X's Vej 253",
+                "City": "Tranbjerg",
+                "CountryCode": "DK",
+                "PostalCode": "8310"
+            },
+            "Tags": [
+                "MAP ADBLUE",
+                "MAP CAR",
+                "MAP HVO",
+                "MAP LOCAL CARDS",
+                "MAP MASTERCARD",
+                "MAP VISA",
+                "MAP B7",
+                "MAP HGV"
+            ],
+            "MarkerColor": "0000FF",
+            "Position": {
+                "Lat": 56.10383359999999,
+                "Lng": 10.1449978
+            },
+            "Usage": {
+                "MobileFueling": true,
+                "MobileMap": true,
+                "MobileBankCard": true,
+                "WebMap": true
+            }
+        },
+        {
+            "SiteNo": 13,
+            "SiteID": "TEST/DK/Site0016",
+            "CompanyNo": 475,
+            "Name": "Stenvej",
+            "Address": {
+                "AddressLine1": "Stenvej 17",
+                "City": "Højbjerg",
+                "CountryCode": "DK",
+                "PostalCode": "8270"
+            },
+            "Tags": [
+                "MAP ADBLUE",
+                "MAP CAR",
+                "MAP LOCAL CARDS",
+                "MAP 95 BF",
+                "MAP RME100",
+                "MAP B7",
+                "MAP HGV"
+            ],
+            "MarkerColor": "0000FF",
+            "Position": {
+                "Lat": 56.10726349999999,
+                "Lng": 10.2053396
+            },
+            "Usage": {
+                "MobileFueling": true,
+                "MobileMap": true,
+                "MobileBankCard": true,
+                "WebMap": true
+            }
+        },
+        {
+            "SiteNo": 14,
+            "SiteID": "TEST/DK/Site0016",
+            "CompanyNo": 475,
+            "Name": "Oddervej",
+            "Address": {
+                "AddressLine1": "Oddervej 178 A",
+                "City": "Højbjerg",
+                "CountryCode": "DK",
+                "PostalCode": "8270"
+            },
+            "Tags": [
+                "MAP ADBLUE",
+                "MAP CAR",
+                "MAP HVO",
+                "MAP LOCAL CARDS",
+                "MAP 95 BF",
+                "MAP RME100",
+                "MAP B7",
+                "MAP HGV"
+            ],
+            "MarkerColor": "0000FF",
+            "Position": {
+                "Lat": 56.10392849999999,
+                "Lng": 10.2063975
+            },
+            "Usage": {
+                "MobileFueling": true,
+                "MobileMap": true,
+                "MobileBankCard": true,
+                "WebMap": true
+            }
+        },
+        {
+            "SiteNo": 15,
+            "SiteID": "TEST/DK/Site0016",
+            "CompanyNo": 475,
+            "Name": "Sletvej",
+            "Address": {
+                "AddressLine1": "Sletvej 36",
+                "City": "Tranbjerg",
+                "CountryCode": "DK",
+                "PostalCode": "8310"
+            },
+            "Tags": [
+                "MAP ADBLUE",
+                "MAP CAR",
+                "MAP HVO",
+                "MAP LOCAL CARDS",
+                "MAP RME100",
+                "MAP B7",
+                "MAP HGV"
+            ],
+            "MarkerColor": "0000FF",
+            "Position": {
+                "Lat": 56.1078442,
+                "Lng": 10.1344246
+            },
+            "Usage": {
+                "MobileFueling": true,
+                "MobileMap": true,
+                "MobileBankCard": true,
+                "WebMap": true
+            }
+        },
+        {
+            "SiteNo": 16,
+            "SiteID": "TEST/DK/Site0016",
+            "CompanyNo": 475,
+            "Name": "Højbjerg",
+            "Address": {
+                "AddressLine1": "Stenvej 1",
+                "City": "Højbjerg",
+                "CountryCode": "DK",
+                "PostalCode": "8270"
+            },
+            "Tags": [
+                "MAP CAR",
+                "MAP LOCAL CARDS",
+                "MAP MASTERCARD",
+                "MAP VISA",
+                "MAP 95 BF",
+                "MAP RME100",
+                "MAP B7"
+            ],
+            "MarkerColor": "0000FF",
+            "Position": {
+                "Lat": 56.1073817,
+                "Lng": 10.2071417
+            },
+            "Usage": {
+                "MobileFueling": true,
+                "MobileMap": true,
+                "MobileBankCard": true,
+                "WebMap": true
+            }
+        },
+        {
+            "SiteNo": 17,
+            "SiteID": "TEST/DK/Site0016",
+            "CompanyNo": 475,
+            "Name": "Rosenvang",
+            "Address": {
+                "AddressLine1": "Rosenvangs Allé 218",
+                "City": "Højbjerg",
+                "CountryCode": "DK",
+                "PostalCode": "8270"
+            },
+            "Tags": [
+                "MAP ADBLUE",
+                "MAP CAR",
+                "MAP HVO",
+                "MAP LOCAL CARDS",
+                "MAP RME100",
+                "MAP B7",
+                "MAP HGV"
+            ],
+            "MarkerColor": "0000FF",
+            "Position": {
+                "Lat": 56.1171405,
+                "Lng": 10.1985861
+            },
+            "Usage": {
+                "MobileFueling": true,
+                "MobileMap": true,
+                "MobileBankCard": true,
+                "WebMap": true
+            }
+        },
+        {
+            "SiteNo": 18,
+            "SiteID": "TEST/DK/Site0016",
+            "CompanyNo": 475,
+            "Name": "Harken",
+            "Address": {
+                "AddressLine1": "Rærupmarken 1",
+                "City": "Hjørring",
+                "CountryCode": "DK",
+                "PostalCode": "9800"
+            },
+            "Tags": [
+                "MAP ADBLUE",
+                "MAP CAR",
+                "MAP HVO",
+                "MAP LOCAL CARDS",
+                "MAP RME100",
+                "MAP B7",
+                "MAP HGV"
+            ],
+            "MarkerColor": "0000FF",
+            "Position": {
+                "Lat": 57.395936638739535,
+                "Lng": 9.98468531420203
+            },
+            "Usage": {
+                "MobileFueling": true,
+                "MobileMap": true,
+                "MobileBankCard": true,
+                "WebMap": true
+            }
+        },
+        {
+            "SiteNo": 20,
+            "SiteID": "TEST/DK/Site0016",
+            "CompanyNo": 475,
+            "Name": "Bjarne",
+            "Address": {
+                "AddressLine1": "Ronesbanke 8",
+                "City": "Præstø",
+                "CountryCode": "DK",
+                "PostalCode": "4720"
+            },
+            "Tags": [
+                "MAP ADBLUE",
+                "MAP CAR",
+                "MAP HVO",
+                "MAP LOCAL CARDS",
+                "MAP RME100",
+                "MAP B7",
+                "MAP HGV"
+            ],
+            "MarkerColor": "FF0000",
+            "Position": {
+                "Lat": 55.106365693163,
+                "Lng": 12.028547588143137
+            },
+            "Usage": {
+                "MobileFueling": true,
+                "MobileMap": true,
+                "MobileBankCard": true,
+                "WebMap": true
+            }
+        },
+        {
+            "SiteNo": 21,
+            "SiteID": "TEST/DK/Site0016",
+            "CompanyNo": 475,
+            "Name": "Præstø",
+            "Address": {
+                "AddressLine1": "Værkstedsvej 8",
+                "City": "Præstø",
+                "CountryCode": "DK",
+                "PostalCode": "4720"
+            },
+            "Tags": [
+                "MAP ADBLUE",
+                "MAP CAR",
+                "MAP HVO",
+                "MAP LOCAL CARDS",
+                "MAP RME100",
+                "MAP B7",
+                "MAP HGV"
+            ],
+            "MarkerColor": "FF0000",
+            "Position": {
+                "Lat": 55.11550071481371,
+                "Lng": 12.039262359816872
+            },
+            "Usage": {
+                "MobileFueling": true,
+                "MobileMap": true,
+                "MobileBankCard": true,
+                "WebMap": true
+            }
+        },
+        {
+            "SiteNo": 22,
+            "SiteID": "TEST/DK/Site0016",
+            "CompanyNo": 475,
+            "Name": "Ny Esbjergvej",
+            "Address": {
+                "AddressLine1": "Ny Esbjergvej 16",
+                "City": "Præstø",
+                "CountryCode": "DK",
+                "PostalCode": "4720"
+            },
+            "Tags": [
+                "MAP ADBLUE",
+                "MAP CAR",
+                "MAP HVO",
+                "MAP LOCAL CARDS",
+                "MAP RME100",
+                "MAP B7",
+                "MAP HGV"
+            ],
+            "MarkerColor": "FF0000",
+            "Position": {
+                "Lat": 55.1173403591996,
+                "Lng": 12.03380249782203
+            },
+            "Usage": {
+                "MobileFueling": true,
+                "MobileMap": true,
+                "MobileBankCard": true,
+                "WebMap": true
+            }
+        },
+        {
+            "SiteNo": 23,
+            "SiteID": "TEST/DK/Site0016",
+            "CompanyNo": 475,
+            "Name": "Bårse",
+            "Address": {
+                "AddressLine1": "Næstvedvej 32, Bårse",
+                "City": "Præstø",
+                "CountryCode": "DK",
+                "PostalCode": "4720"
+            },
+            "Tags": [
+                "MAP ADBLUE",
+                "MAP CAR",
+                "MAP HVO",
+                "MAP LOCAL CARDS",
+                "MAP RME100",
+                "MAP B7",
+                "MAP HGV"
+            ],
+            "MarkerColor": "FF0000",
+            "Position": {
+                "Lat": 55.12130803303376,
+                "Lng": 11.96900910746192
+            },
+            "Usage": {
+                "MobileFueling": true,
+                "MobileMap": true,
+                "MobileBankCard": true,
+                "WebMap": true
+            }
+        },
+        {
+            "SiteNo": 24,
+            "SiteID": "TEST/DK/Site0016",
+            "CompanyNo": 475,
+            "Name": "Skanderborg",
+            "Address": {
+                "AddressLine1": "Niels Bohrs Vej 17",
+                "City": "Skanderborg",
+                "CountryCode": "DK",
+                "PostalCode": "8660"
+            },
+            "Tags": [
+                "MAP ADBLUE",
+                "MAP CAR",
+                "MAP HVO",
+                "MAP LOCAL CARDS",
+                "MAP RME100",
+                "MAP B7",
+                "MAP HGV",
+                "MAP BANKCARD DENY"
+            ],
+            "MarkerColor": "FF0000",
+            "Position": {
+                "Lat": 56.0671873,
+                "Lng": 9.9815894
+            },
+            "Usage": {
+                "MobileFueling": true,
+                "MobileMap": true,
+                "MobileBankCard": false,
+                "WebMap": true
+            }
+        },
+        {
+            "SiteNo": 25,
+            "SiteID": "TEST/DK/Site0016",
+            "CompanyNo": 475,
+            "Name": "Test Station",
+            "Address": {
+                "AddressLine1": "Langfredparken 215",
+                "City": "Sabro",
+                "CountryCode": "DK",
+                "PostalCode": "8471"
+            },
+            "Tags": [
+                "MAP ADBLUE",
+                "MAP CAR",
+                "MAP HVO",
+                "MAP LOCAL CARDS",
+                "MAP MASTERCARD",
+                "MAP VISA",
+                "MAP 95 BF",
+                "MAP RME100",
+                "MAP B7",
+                "MAP HGV"
+            ],
+            "MarkerColor": "0000FF",
+            "Position": {
+                "Lat": 56.212254,
+                "Lng": 10.048151
+            },
+            "Usage": {
+                "MobileFueling": true,
+                "MobileMap": true,
+                "MobileBankCard": true,
+                "WebMap": true
+            }
+        }
+    ],
+    "Tags": [
+        {
+            "CompanyNo": 475,
+            "TagName": "MAP 95 OCTANE",
+            "Description": "Petrol 95 Octane",
+            "IconUrl": null,
+            "Type": "FUEL"
+        },
+        {
+            "CompanyNo": 475,
+            "TagName": "MAP ADBLUE",
+            "Description": "AdBlue",
+            "IconUrl": "https://assets.codatahost.com/apps/customerapp/v2/map-icons/AdBlue-icon-2-path.svg",
+            "Type": "FUEL"
+        },
+        {
+            "CompanyNo": 475,
+            "TagName": "MAP BIOD 100%",
+            "Description": "Bio Diesel 100%",
+            "IconUrl": null,
+            "Type": "FUEL"
+        },
+        {
+            "CompanyNo": 475,
+            "TagName": "MAP CAR",
+            "Description": "Car",
+            "IconUrl": "https://assets.codatahost.com/apps/customerapp/v2/map-icons/sports-car-0256.svg",
+            "Type": "VEHICLE"
+        },
+        {
+            "CompanyNo": 475,
+            "TagName": "MAP DIESEL",
+            "Description": "Diesel",
+            "IconUrl": "https://assets.codatahost.com/apps/customerapp/v2/map-icons/Diesel-icon-path.svg",
+            "Type": "FUEL"
+        },
+        {
+            "CompanyNo": 475,
+            "TagName": "MAP HVO",
+            "Description": "HVO",
+            "IconUrl": "https://assets.codatahost.com/apps/customerapp/v2/map-icons/HVO-icon-6-path.svg",
+            "Type": "FUEL"
+        },
+        {
+            "CompanyNo": 475,
+            "TagName": "MAP LOCAL CARDS",
+            "Description": "Jetzt Energy Card",
+            "IconUrl": "https://assets.codatahost.com/cmp/475_sample/mapicons/JetztEnergyCard.png",
+            "Type": "PAYMENT"
+        },
+        {
+            "CompanyNo": 475,
+            "TagName": "MAP MASTERCARD",
+            "Description": "Master Card",
+            "IconUrl": "https://assets.codatahost.com/apps/customerapp/v2/map-icons/MasterCard.svg",
+            "Type": "PAYMENT"
+        },
+        {
+            "CompanyNo": 475,
+            "TagName": "MAP SHOP",
+            "Description": "Shop",
+            "IconUrl": "https://assets.codatahost.com/cmp/475_sample/mapicons/JetztEnergyShop.svg",
+            "Type": null
+        },
+        {
+            "CompanyNo": 475,
+            "TagName": "MAP TRUCK",
+            "Description": "Truck",
+            "IconUrl": null,
+            "Type": "VEHICLE"
+        },
+        {
+            "CompanyNo": 475,
+            "TagName": "MAP VISA",
+            "Description": "Visa",
+            "IconUrl": "https://assets.codatahost.com/apps/customerapp/v2/map-icons/VISA.svg",
+            "Type": "PAYMENT"
+        },
+        {
+            "CompanyNo": 475,
+            "TagName": "MAP 95 BF",
+            "Description": "Petrol 95 Octane",
+            "IconUrl": "https://assets.codatahost.com/apps/customerapp/v2/map-icons/95UL-icon-path.svg",
+            "Type": "FUEL"
+        },
+        {
+            "CompanyNo": 475,
+            "TagName": "MAP B7",
+            "Description": "Diesel",
+            "IconUrl": "https://assets.codatahost.com/apps/customerapp/v2/map-icons/DieselB7-icon-path.svg",
+            "Type": "FUEL"
+        },
+        {
+            "CompanyNo": 475,
+            "TagName": "MAP RME100",
+            "Description": "Bio Diesel 100%",
+            "IconUrl": "https://assets.codatahost.com/apps/customerapp/v2/map-icons/RME100-icon-5-path.svg",
+            "Type": "FUEL"
+        },
+        {
+            "CompanyNo": 475,
+            "TagName": "MAP HGV",
+            "Description": "Truck",
+            "IconUrl": "https://assets.codatahost.com/apps/customerapp/v2/map-icons/truck-0256.svg",
+            "Type": "VEHICLE"
+        },
+        {
+            "CompanyNo": 475,
+            "TagName": "MAP BANKCARD DENY",
+            "IconUrl": "https://assets.codatahost.com/icons/sitemap-icons/question-circle-regular.svg",
+            "Description": "Betalingskort modtages ikke",
+            "Type": null
+        }        
+    ],
+    "AllowDownload": true,
+    "Grouping": [
+        {
+            "GroupName": "Fuel",
+            "Tags": [
+                "MAP 95 BF",
+                "MAP ADBLUE",
+                "MAP RME100",
+                "MAP B0",
+                "MAP B7",
+                "MAP HVO"
+            ]
+        },
+        {
+            "GroupName": "Vehicles",
+            "Tags": [
+                "MAP CAR",
+                "MAP HGV"
+            ]
+        },
+        {
+            "GroupName": "Payment",
+            "Tags": [
+                "MAP VISA",
+                "MAP MASTERCARD",
+                "MAP LOCAL CARDS",
+                "MAP APP TANK"
+            ]
+        },
+        {
+            "GroupName": "Other",
+            "Catchall": true,
+            "Tags": [
+                "MAP SHOP",
+                "MAP BANKCARD DENY"
+            ]
+        }
+    ]
+}
